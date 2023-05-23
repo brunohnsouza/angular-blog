@@ -1,0 +1,11 @@
+@media (max-width: 1070px) {
+    .articles__others-bottom {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 790px) {
+    .articles__others-bottom {
+        grid-template-columns: 1fr;
+    }
+}

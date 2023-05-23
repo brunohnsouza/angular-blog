@@ -1,0 +1,7 @@
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.2rem 0;
+    color: #FFF;
+}

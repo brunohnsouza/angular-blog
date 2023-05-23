@@ -1,0 +1,41 @@
+.container__small-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.top__small-card__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.middle__small-card__date {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #707070;
+}
+
+.middle__small-card__title a {
+    font-size: 2.4rem;
+    color: #FFF;
+    margin-bottom: .4rem;
+}
+
+.middle__small-card__title,
+.middle__small-card__description {
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.middle__small-card__description {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #808080;
+}

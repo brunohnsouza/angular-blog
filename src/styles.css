@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #111;
+    color: #FFF;
+}
+
+a { 
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: .8rem;
+  }
+  
+::-webkit-scrollbar-track {
+    background-color: #212121;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #808080;
+}

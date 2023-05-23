@@ -1,0 +1,24 @@
+@media (max-width: 790px) {
+    .container__small-card {
+        flex-direction: row;
+        gap: 3.2rem;
+    }
+
+    .middle__small-card__description {
+        display: none;
+    }
+
+    .top {
+        width: 40%;
+    }
+
+    .middle {
+        width: 60%;
+    }
+}
+
+@media (max-width: 425px) {
+    .middle__small-card__title a {
+        font-size: 1.8rem;
+    }
+}

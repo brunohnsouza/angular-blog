@@ -1,27 +1,47 @@
-# AngularBlog
+<h1 align="center">
+    OBlog
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+<p align="center">
+    Todos os meus artigos em um só lugar!
+</p>
 
-## Development server
+<p align="center">
+  <a href="#objetivo">Objetivo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Ferramentas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#layout">Layout</a>
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
 
-## Code scaffolding
+<p align="center">
+  <img alt="Blog Preview" src=".github/preview.jpeg">
+</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<h2 id="objetivo">🚀 <b>Objetivo:</b></h2>
 
-## Build
+- Criar uma aplicação de blog funcional, construir componentes inteligentes e aprender como organizar um projeto Angular utilizando as ferramentas que o próprio Framework oferece.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<h2 id="tecnologias">🔧 <b>Ferramentas:</b></h2>
 
-## Running unit tests
+- [Angular](https://angular.io/) v16
+- [TypeScript](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html) v5
+- HTML e CSS
+- Git e GitHub
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<h2 id="projeto">💻 <b>Projeto:</b></h2>
 
-## Running end-to-end tests
+- [Veja o projeto online](https://explorer-nlw-spacetime.vercel.app/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<h2 id="layout">🎨 <b>Layout:</b></h2>
 
-## Further help
+- [Dwinawan | Blog - Personal Website](https://dribbble.com/shots/15238065-Blog-Personal-Website)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<br>
+
+<p align="center">
+  Feito com 💜 por mim | Bruno Souza
+</p>

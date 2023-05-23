@@ -1,0 +1,45 @@
+.container__big-card {
+    display: flex;
+    width: 100%;
+    gap: 4.0rem;
+}
+
+.right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.left__big-card__photo {
+    width: 60%
+}
+.left__big-card__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right__big-card__date {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #707070;
+}
+
+.right__big-card__title,
+.right__big-card__description {
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.right__big-card__title a {
+    font-size: 3.6rem;
+    color: #FFF;
+}
+
+.right__big-card__description {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #808080;
+}
+

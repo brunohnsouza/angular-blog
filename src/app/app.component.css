@@ -1,0 +1,33 @@
+main {
+    display: grid;
+    place-content: center;
+    row-gap: 6.4rem;
+    margin: 0 auto;
+    padding: 13.2rem 0;
+    width: min(90vw, 100%);
+}
+
+header {
+    padding: 2.4rem 3.2rem;
+    position: fixed;
+    background-color: #111;
+    width: 100%;
+}
+
+footer {
+    background-color: #212121;
+    width: 100%;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 10.4rem;
+}
+
+.articles__others-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4.0rem;
+    row-gap: 6.4rem;
+}
