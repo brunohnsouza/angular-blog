@@ -4,10 +4,14 @@
     gap: 1.6rem;
 }
 
+.top__small-card__photo {
+    width: 100%;
+    height: 20.0rem;
+}
+
 .top__small-card__photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .middle {
