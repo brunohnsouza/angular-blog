@@ -7,14 +7,18 @@
 }
 
 :root {
+    --primary-color: #121214;
+    --secundary-color: #808080;
+    --tertiary-color: #FFF;
+    --quaternary-color: #C4C4CC;
     font-size: 62.5%;
 }
 
 body {
     font-size: 1.6rem;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #111;
-    color: #FFF;
+    font-family: 'Switzer', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
 }
 
 a { 
@@ -27,12 +31,17 @@ ul {
 
 ::-webkit-scrollbar {
     width: .8rem;
-  }
-  
-::-webkit-scrollbar-track {
-    background-color: #212121;
+    height: .8rem;
 }
-  
+
+::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+}
+
 ::-webkit-scrollbar-thumb {
-    background-color: #808080;
+    border-top-right-radius: .4rem;
+    border-top-left-radius: .4rem;
+    border-bottom-left-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+    background-color: var(--secundary-color);
 }

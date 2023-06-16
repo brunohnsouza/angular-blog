@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: min(90vw, 100%);
+    margin: 0 auto;
+    padding: 2.4rem 0;
 }
 
 .left {
@@ -22,7 +25,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%; 
-    object-fit: cover; 
+    object-fit: contain; 
 }
 
 .right ul {
@@ -37,5 +40,5 @@
     transition: fill .2s ease-in-out;
 }
 .social:is(:hover) svg {
-    fill: #FFF;
+    fill: var(--tertiary-color);
 }

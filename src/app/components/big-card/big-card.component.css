@@ -1,7 +1,6 @@
 .container__big-card {
     display: flex;
-    width: 100%;
-    gap: 4.0rem;
+    gap: 3.2rem;
 }
 
 .right {
@@ -12,18 +11,20 @@
 }
 
 .left__big-card__photo {
-    width: 60%
+    width: 60.0rem;
 }
+
 .left__big-card__photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border-radius: .4rem;
+    object-fit: contain;
 }
 
 .right__big-card__date {
     font-size: 1.4rem;
     font-weight: 500;
-    color: #707070;
+    color: var(--secundary-color);
 }
 
 .right__big-card__title,
@@ -32,14 +33,24 @@
     overflow-wrap: break-word;
 }
 
+.right__big-card__title,
+.right__big-card__description {
+    line-height: 140%;
+}
+
 .right__big-card__title a {
     font-size: 3.6rem;
-    color: #FFF;
+    color: var(--tertiary-color);
+
+    transition: opacity .2s ease-in-out;
+}
+
+.right__big-card__title a:is(:hover) {
+    opacity: .87;
 }
 
 .right__big-card__description {
     font-size: 1.6rem;
-    font-weight: 500;
-    color: #808080;
+    color: var(--quaternary-color);
 }
 

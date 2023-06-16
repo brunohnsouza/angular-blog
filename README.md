@@ -31,6 +31,8 @@
 - [TypeScript](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html) v5
 - HTML e CSS
 - Git e GitHub
+- [Fontshare](https://www.fontshare.com/)
+- [Phosphoricons](https://phosphoricons.com/)
 
 <h2 id="projeto">💻 <b>Projeto:</b></h2>
 

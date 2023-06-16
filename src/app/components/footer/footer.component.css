@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3.2rem 0;
-    color: #FFF;
+    width: min(90vw, 100%);
+    margin: 0 auto;
+    padding: 2.4rem 0;
+    color: var(--quaternary-color);
 }

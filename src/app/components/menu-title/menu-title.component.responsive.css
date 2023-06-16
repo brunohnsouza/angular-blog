@@ -1,8 +1,4 @@
 @media (max-width: 790px) {
-    .container__menu-title {
-        justify-content: center;
-    }
-
     .container__menu-title h1 {
         font-size: 9.6rem;
     }
