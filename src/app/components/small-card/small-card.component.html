@@ -1,15 +1,21 @@
 <div class="container__small-card">
-    <figure class="left__small-card__photo">
-        <a href="{{ cardUrl }}" target="_blank" rel="noopener noreferrer">
-            <img src="{{ photoCover }}" alt="Imagem relacionada a capa">
-        </a>
-    </figure>
+  <a href="{{ cardUrl }}" target="_blank" rel="noopener noreferrer">
+    <img
+      class="container__small-card__img"
+      src="{{ photoCover }}"
+      alt="Imagem relacionada a capa"
+    />
+  </a>
 
-    <div class="right">
-        <span class="right__small-card__date">{{ cardDate }}</span>
+  <div class="bottom">
+    <span>{{ cardDate }}</span>
 
-        <h2 class="right__small-card__title">
-            <a href="{{ cardUrl }}" target="_blank" rel="noopener noreferrer">{{ cardTitle }}</a>
-        </h2>
-    </div>
+    <h2>
+      <a href="{{ cardUrl }}" target="_blank" rel="noopener noreferrer">{{
+        cardTitle
+      }}</a>
+    </h2>
+
+    <p>{{ cardDescription }}</p>
+  </div>
 </div>

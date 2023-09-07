@@ -1,49 +1,49 @@
 <header>
-    <app-menu-bar></app-menu-bar>
+  <app-menu-bar></app-menu-bar>
 </header>
 
-<main>
-    <app-menu-title></app-menu-title>
-    
-    <section class="articles">
-        <article class="articles__main-top">
-            <app-big-card
-                photoCover="https://hermes.dio.me/articles/cover/e758e0d6-e41b-476e-b871-0b999894d785.png"
-                cardDate="16 Junho, 2023"
-                cardTitle="Do www ao .com: Um Olhar Profundo sobre o DNS e sua Hierarquia"
-                cardUrl="https://dio.me/articles/como-usar-o-chatgpt-nos-seus-estudos-de-programacao?q=1399"
-                cardDescription="Conheça a hierarquia do Domain Name System (DNS), um sistema vital para a nossa busca por recursos na web."
-            ></app-big-card>
-        </article>
-        
-        <article class="articles__others-bottom">
-            <app-small-card
-                photoCover="https://hermes.dio.me/articles/cover/c1b7f860-b51e-4239-81c7-d76d04cebd00.png"
-                cardDate="09 Março, 2023"
-                cardTitle="Como Usar O ChatGPT Nos Seus Estudos de Programação"
-                cardUrl="https://dio.me/articles/como-usar-o-chatgpt-nos-seus-estudos-de-programacao?q=1399"
-            ></app-small-card>
+<main id="app">
+  <section class="articles">
+    <article class="articles__main-top">
+      <app-big-card
+        photoCover="https://hermes.dio.me/articles/cover/e758e0d6-e41b-476e-b871-0b999894d785.png"
+        cardDate="16 Junho, 2023"
+        cardTitle="Do www ao .com: Um Olhar Profundo sobre o DNS e sua Hierarquia"
+        cardUrl="https://www.dio.me/articles/do-www-ao-com-um-olhar-profundo-sobre-o-dns-e-sua-hierarquia"
+        cardDescription="Conheça a hierarquia do Domain Name System (DNS), um sistema vital para a nossa busca por recursos na web."
+      ></app-big-card>
+    </article>
 
-            <app-small-card
-                photoCover="https://hermes.dio.me/articles/cover/4107bd6b-b0b4-43d0-9c73-03b5ba45aa45.png"
-                cardDate="17 Fevereiro, 2023"
-                cardTitle="Entenda as Formas de Transmissão de Dados Através Da Internet"
-                cardUrl="https://dio.me/articles/entenda-as-formas-de-transmissao-de-dados-atraves-da-internet?q=591"
-            ></app-small-card>
+    <article class="articles__others-bottom">
+      <app-small-card
+        photoCover="https://hermes.dio.me/articles/cover/c1b7f860-b51e-4239-81c7-d76d04cebd00.png"
+        cardDate="09 Março, 2023"
+        cardTitle="Como Usar O ChatGPT Nos Seus Estudos de Programação"
+        cardUrl="https://dio.me/articles/como-usar-o-chatgpt-nos-seus-estudos-de-programacao?q=1399"
+        cardDescription="ChatGPT: A revolução da IA na produtividade - 100 milhões de usuários em 2 meses. Descubra como usá-lo em seus estudos de programação!"
+      ></app-small-card>
 
-            <app-small-card
-                photoCover="https://hermes.dio.me/articles/cover/4ebb552f-21db-4825-ba36-f30573159577.jpg"
-                cardDate="01 Dezembro, 2022"
-                cardTitle="Saiba Como Deixar Seu Perfil No GitHub Atrativo"
-                cardUrl="https://dio.me/articles/saiba-como-deixar-seu-perfil-no-github-atrativo?q=1378"
-            ></app-small-card>
-        </article>
-    </section>
+      <app-small-card
+        photoCover="https://hermes.dio.me/articles/cover/4107bd6b-b0b4-43d0-9c73-03b5ba45aa45.png"
+        cardDate="17 Fevereiro, 2023"
+        cardTitle="Entenda as Formas de Transmissão de Dados Através Da Internet"
+        cardUrl="https://dio.me/articles/entenda-as-formas-de-transmissao-de-dados-atraves-da-internet?q=591"
+        cardDescription="Descubra as 3 formas cruciais de comunicação na internet em nosso mundo repleto de bits! Dados incríveis revelados."
+      ></app-small-card>
 
+      <app-small-card
+        photoCover="https://hermes.dio.me/articles/cover/4ebb552f-21db-4825-ba36-f30573159577.jpg"
+        cardDate="01 Dezembro, 2022"
+        cardTitle="Saiba Como Deixar Seu Perfil No GitHub Atrativo"
+        cardUrl="https://dio.me/articles/saiba-como-deixar-seu-perfil-no-github-atrativo?q=1378"
+        cardDescription="Descubra como tornar seu perfil GitHub atraente e completo neste artigo especial. Deixe sua marca no mundo do código!"
+      ></app-small-card>
+    </article>
+  </section>
 </main>
 
 <footer>
-    <app-footer></app-footer>
+  <app-footer></app-footer>
 </footer>
 
 <router-outlet></router-outlet>

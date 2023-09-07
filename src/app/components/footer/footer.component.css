@@ -1,9 +1,9 @@
 .copyright {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: min(90vw, 100%);
-    margin: 0 auto;
-    padding: 2.4rem 0;
-    color: var(--quaternary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(121.6rem, 90vw);
+  margin: 0 auto;
+  padding: 2.4rem 0;
+  color: var(--quaternary-color);
 }
