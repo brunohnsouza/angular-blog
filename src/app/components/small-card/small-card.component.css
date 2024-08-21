@@ -6,9 +6,9 @@
 
 .container__small-card__img {
   width: 100%;
-  min-height: 26rem;
   border-radius: 0.8rem;
-  flex-shrink: 0;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
 .bottom {
@@ -18,9 +18,9 @@
 }
 
 .bottom span {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400;
-  color: var(--secondary-color);
+  color: var(--secundary-color);
 }
 
 .bottom h2 a,
@@ -45,7 +45,6 @@
 
 .bottom p {
   font-weight: 400;
-  font-size: 1.6rem;
   line-height: 2.4rem;
   color: var(--secondary-color);
 }
