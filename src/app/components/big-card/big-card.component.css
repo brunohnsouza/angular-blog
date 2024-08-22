@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   column-gap: 4rem;
-  row-gap: 3.2rem;
+  row-gap: 2.4rem;
 }
 
 .right {
@@ -20,6 +20,10 @@
   border-radius: 0.8rem;
   aspect-ratio: 16/9;
   object-fit: cover;
+  transition: all 0.2s ease-in-out;
+}
+.left__big-card__photo img:hover {
+  filter: brightness(0.9);
 }
 
 .right__big-card__date {
@@ -36,6 +40,10 @@
 
 .right__big-card__title {
   max-width: 57rem;
+  transition: all 0.2s ease-in-out;
+}
+.right__big-card__title:hover {
+  filter: brightness(0.9);
 }
 
 .right__big-card__title a {

@@ -9,6 +9,10 @@
   border-radius: 0.8rem;
   aspect-ratio: 16/9;
   object-fit: cover;
+  transition: all 0.2s ease-in-out;
+}
+.container__small-card__img:hover {
+  filter: brightness(0.9);
 }
 
 .bottom {
@@ -29,6 +33,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
   overflow-wrap: break-word;
+}
+
+.bottom h2 {
+  transition: all 0.2s ease-in-out;
+}
+.bottom h2:hover {
+  filter: brightness(0.9);
 }
 
 .bottom h2 a {
