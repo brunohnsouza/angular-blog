@@ -17,8 +17,9 @@
 
 .left__big-card__photo img {
   width: 100%;
-  min-height: 26rem;
   border-radius: 0.8rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
 .right__big-card__date {
