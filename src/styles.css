@@ -1,61 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --primary-color: #0a060e;
-  --secondary-color: rgb(255, 255, 255, 0.5);
-  --tertiary-color: rgb(255, 255, 255, 0.8);
-  --quaternary-color: #c4c4cc;
-
-  --purple-color-100: #603b9b;
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: "Switzer", sans-serif;
-  background-color: var(--primary-color);
-  color: var(--tertiary-color);
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-::-webkit-scrollbar {
-  width: 0.8rem;
-  height: 0.8rem;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--primary-color);
-}
-
-::-webkit-scrollbar-thumb {
-  border-top-right-radius: 0.4rem;
-  border-top-left-radius: 0.4rem;
-  border-bottom-left-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
-  background-color: var(--secondary-color);
-}
-
-@media (max-width: 375px) {
+@layer base {
   :root {
-    font-size: 50%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.3rem;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
-@media (min-width: 2560px) {
-  :root {
-    font-size: 75%;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground tracking-wider;
+    scrollbar-width: var(--radius);
+    scrollbar-color: hsl(var(--accent-foreground) / 0.4);
+  }
+  ::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: hsl(var(--border));
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--accent-foreground) / 0.4);
+    border-radius: var(--radius);
   }
 }

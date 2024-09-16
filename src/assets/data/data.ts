@@ -1,0 +1,972 @@
+import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
+
+export type ArticleProps = {
+    id: string;
+    cover: string;
+    datePost: string;
+    title: string;
+    subtitle: string;
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    content: any[];
+}
+
+export const data: ArticleProps[] = [
+    {
+        id: "h1",
+        cover: "https://hermes.dio.me/articles/cover/af56b66d-1e55-49d4-a006-21a578df8c57.png",
+        datePost: format(new Date(2024, 7, 21), "dd MMMM, yyyy", { locale: ptBR }),
+        title: 'Gerenciadores de Pacotes JavaScript: Como Escolher o Melhor para Seus Projetos',
+        subtitle: 'Entenda como ferramentas como npm, Yarn, Pnpm e Deno tornam o processo de codificação mais eficiente e organizado, permitindo que você crie projetos de forma mais ágil e estruturada.',
+        content: [
+            {
+                id: "paragraph",
+                text: "Se você está começando no mundo da programação, especialmente com JavaScript, pode ter ouvido falar sobre gerenciadores de pacotes como npm, Yarn, Pnpm e outros. Eles são ferramentas poderosas que ajudam os desenvolvedores a gerenciar, compartilhar e organizar os pacotes (ou bibliotecas) que usam em seus projetos. Vamos explorar o que são e como funcionam, de forma simples e clara."
+            },
+            {
+                id: "h2",
+                text: "O que é um Gerenciador de Pacotes?"
+            },
+            {
+                id: "paragraph",
+                text: "Imagine que você está construindo uma casa. Para isso, você precisa de vários materiais, como tijolos, cimento e madeira. Em vez de criar tudo do zero, você vai a uma loja de materiais de construção e compra o que precisa. Um gerenciador de pacotes é como essa loja, mas para o código. Ele permite que você baixe e gerencie todas as 'peças' de código (pacotes) necessárias para construir seu projeto, em vez de criar tudo do zero."
+            },
+            {
+                id: "h2",
+                text: "npm: O Pioneiro dos Gerenciadores de Pacotes"
+            },
+            {
+                id: "paragraph",
+                text: "npm (Node Package Manager) é o gerenciador de pacotes mais utilizado no mundo JavaScript. Ele tem duas funções principais:"
+            },
+            {
+                id: "bullet",
+                "items": [
+                    "Plataforma Online: Um site onde os desenvolvedores publicam e compartilham seus pacotes JavaScript. Você pode explorar diferentes pacotes no npmjs.com.",
+                    "Ferramenta de Linha de Comando: Um programa que você instala no seu computador e usa no terminal para gerenciar pacotes. Com ele, você pode baixar novos pacotes, atualizá-los ou removê-los do seu projeto."
+                ],
+                formatText: "styleTextAfterColon"
+            },
+            {
+                id: "paragraph",
+                text: "Quando você começa um novo projeto com npm, ele cria um arquivo chamado package.json, que lista todas as dependências do projeto, ou seja, todos os pacotes que o seu projeto precisa para funcionar."
+            },
+            {
+                id: "code",
+                "language": "bash",
+                text: "npm init"
+            },
+            {
+                id: "paragraph",
+                text: "Esse comando cria o package.json para você."
+            },
+            {
+                id: "h2",
+                text: "Yarn: Uma Alternativa ao npm"
+            },
+            {
+                id: "paragraph",
+                text: "O Yarn é muito semelhante ao npm, mas foi criado para ser mais rápido e seguro. Assim como o npm, ele tem sua própria ferramenta de linha de comando e também cria um arquivo package.json. Se você já sabe usar o npm, o Yarn será muito fácil de aprender, pois os comandos são praticamente idênticos."
+            },
+            {
+                id: "paragraph",
+                text: "O Yarn também tem seu próprio comando de inicialização de projeto:"
+            },
+            {
+                id: "code",
+                "language": "bash",
+                text: "yarn init"
+            },
+            {
+                id: "h2",
+                text: "pnpm: O Performático e Eficiente"
+            },
+            {
+                id: "paragraph",
+                text: "O Pnpm é uma versão mais eficiente do npm. Ele trabalha de maneira diferente ao armazenar os pacotes que você baixa. Normalmente, o npm copia cada pacote para o seu projeto, o que pode ocupar muito espaço no seu disco rígido. O Pnpm evita isso usando algo chamado hard links. Em vez de fazer várias cópias, ele cria um link que aponta para uma única versão do pacote armazenado globalmente no seu computador. Isso economiza espaço e torna o processo mais rápido."
+            },
+            {
+                id: "paragraph",
+                text: "No node_modules/, o pnpm organiza as dependências de maneira hierárquica, mantendo essa pasta mais organizada e evitando conflitos de versões."
+            },
+            {
+                id: "h2",
+                text: "Bun: A Nova Promessa"
+            },
+            {
+                id: "paragraph",
+                text: "Bun é um novo gerenciador de pacotes que vem ganhando atenção por sua promessa de ser extremamente rápido e integrado. Além de gerenciar pacotes, o Bun também inclui um runtime JavaScript e TypeScript, tornando-se uma solução completa para o desenvolvimento web."
+            },
+            {
+                id: "paragraph",
+                text: "Com uma interface similar ao npm e Yarn, o Bun busca proporcionar uma experiência de desenvolvimento ainda mais rápida e otimizada."
+            },
+            {
+                id: "h2",
+                text: "Deno: Segurança e Modernidade"
+            },
+            {
+                id: "paragraph",
+                text: "Deno, criado por Ryan Dahl, o mesmo criador do Node.js, é uma plataforma moderna que inclui um gerenciador de pacotes embutido. Deno adota uma abordagem mais segura, evitando o uso de node_modules/ e promovendo a importação direta de módulos por URL."
+            },
+            {
+                id: "paragraph",
+                text: "Embora Deno não dependa dos pacotes npm diretamente, ele consegue interoperar com eles, permitindo que desenvolvedores aproveitem o vasto ecossistema do Node.js enquanto utilizam as melhorias de segurança e modernidade do Deno."
+            },
+            {
+                id: "h2",
+                text: "Conclusão"
+            },
+            {
+                id: "paragraph",
+                text: "Cada gerenciador de pacotes tem suas particularidades e vantagens, dependendo das necessidades do seu projeto. Enquanto o npm e o Yarn são amplamente utilizados e confiáveis, pnpm, Bun e Deno oferecem novas abordagens que podem melhorar o desempenho e a segurança dos seus projetos JavaScript. Explore essas ferramentas e descubra qual delas se adapta melhor ao seu fluxo de trabalho!"
+            },
+            {
+                id: "h3",
+                text: "Site Oficial do npm"
+            },
+            {
+                id: "paragraph",
+                text: "Para explorar pacotes, documentação e guias de uso do npm."
+            },
+            {
+                id: "link",
+                text: "npmjs.com",
+                "url": "https://www.npmjs.com"
+            },
+            {
+                id: "h3",
+                text: "Documentação Oficial do Yarn"
+            },
+            {
+                id: "paragraph",
+                text: "Para entender melhor como o Yarn funciona e como utilizá-lo em seus projetos."
+            },
+            {
+                id: "link",
+                text: "Yarn",
+                "url": "https://yarnpkg.com"
+            },
+            {
+                id: "h3",
+                text: "Guia Completo do Pnpm"
+            },
+            {
+                id: "paragraph",
+                text: "Conheça todas as funcionalidades do pnpm e como ele pode otimizar o desenvolvimento JavaScript."
+            },
+            {
+                id: "link",
+                text: "pnpm.io",
+                "url": "https://pnpm.io"
+            },
+            {
+                id: "h3",
+                text: "Documentação do Deno"
+            },
+            {
+                id: "paragraph",
+                text: "Saiba mais sobre o Deno e como ele se diferencia dos gerenciadores de pacotes tradicionais."
+            },
+            {
+                id: "link",
+                text: "Deno",
+                "url": "https://deno.land"
+            },
+            {
+                id: "h3",
+                text: "Artigo sobre Hard Links"
+            },
+            {
+                id: "paragraph",
+                text: "Entenda em detalhes o conceito de hard links e como eles funcionam."
+            },
+            {
+                id: "link",
+                text: "Hard Links Explained",
+                "url": "https://example.com/hard-links-explained"
+            }
+        ]
+    },
+    {
+        id: "h1",
+        cover: "https://hermes.dio.me/articles/cover/45384d5a-2a21-4545-bb63-73ddc48b7940.png",
+        datePost: format(new Date(2024, 7, 8), "dd MMMM, yyyy", { locale: ptBR }),
+        title: 'Blockchain: O Que É e Como Está Transformando as Transações Digitais',
+        subtitle: 'Veja como o blockchain está transformando o mundo digital, garantindo transações seguras, descentralizadas e sem intermediários. Entenda o impacto dessa tecnologia em criptomoedas, contratos inteligentes e a revolução financeira global.',
+        content: [
+            {
+                id: "paragraph",
+                text: "Imagine que você tem um caderno onde anota tudo o que gasta no mês. Agora, pense em um caderno igualzinho, mas compartilhado com várias pessoas ao redor do mundo. Cada vez que alguém anota algo, todos os outros cadernos se atualizam automaticamente, e ninguém pode apagar ou alterar o que foi escrito. Parece mágico, não é? Esse é o conceito básico por trás do blockchain! E não se preocupe, vou te explicar como isso funciona de uma forma que qualquer um pode entender, mesmo sem ser um expert em tecnologia."
+            },
+            {
+                id: "h2",
+                text: "O Que é Blockchain? (E por Que Deveria Importar?)"
+            },
+            {
+                id: "paragraph",
+                text: 'Blockchain é uma tecnologia que basicamente permite que pessoas e empresas façam transações entre si sem precisar de um "intermediário" de confiança, como um banco. Você deve estar se perguntando: "Mas como isso é possível?" A resposta é simples: usando criptografia. Cada transação é registrada em um "bloco" e esse bloco é adicionado a uma "cadeia" de blocos anteriores (daí o nome blockchain).'
+            },
+            {
+                id: "paragraph",
+                text: 'Vamos fazer uma analogia: pense na blockchain como uma fila de pessoas esperando para pagar por um produto em uma loja. Cada pessoa na fila representa uma transação, e a fila inteira representa o blockchain. Se alguém tentasse furar a fila (ou seja, alterar uma transação), todos notariam, porque cada pessoa (ou bloco) tem informações sobre quem está à sua frente e atrás.'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/5a970bc9-d1dc-41c0-a332-a103bd0deff4.jpg',
+                altImage: 'Analogia de um blockchain como uma fila de pessoas esperando para pagar por um produto em uma loja.',
+            },
+            {
+                id: "h2",
+                text: "Como Tudo Começou: Bitcoin"
+            },
+            {
+                id: "paragraph",
+                text: "Tudo começou com o Bitcoin, criado por uma pessoa (ou grupo) anônima chamada Satoshi Nakamoto. A ideia era simples, mas revolucionária: criar uma forma de dinheiro digital que pudesse ser transferida diretamente entre pessoas, sem a necessidade de um banco ou outra instituição financeira."
+            },
+            {
+                id: "paragraph",
+                text: 'Satoshi Nakamoto descreveu o Bitcoin como "uma versão peer-to-peer de dinheiro eletrônico", o que significa que você pode enviar dinheiro diretamente para outra pessoa, sem intermediários. Um dos maiores problemas que o Bitcoin resolveu foi o gasto duplo, que é a possibilidade de gastar o mesmo dinheiro duas vezes. Graças à criptografia e ao blockchain, isso não é mais uma preocupação.'
+            },
+            {
+                id: "h2",
+                text: 'Os "Nodes" do Blockchain: Como Funciona?'
+            },
+            {
+                id: "paragraph",
+                text: 'Para garantir que tudo funcione corretamente, a rede blockchain é composta por diferentes "nodes", que são basicamente computadores conectados à rede. Esses nodes desempenham funções diferentes:'
+            },
+            {
+                id: "bullet",
+                "items": [
+                    "Full-Nodes: Imagine que eles são como bibliotecários que guardam cópias completas de todos os livros da biblioteca. Eles armazenam todo o histórico de transações e ajudam a retransmitir novas informações para outros nodes.",
+                    'Mining-Nodes: Pense neles como caçadores de tesouros que resolvem quebra-cabeças complexos. Quando eles encontram a solução, recebem uma recompensa em Bitcoin. Esses "caçadores" agrupam as transações em blocos e os adicionam ao blockchain.',
+                    'Light-Nodes: Esses são como estagiários que ajudam os bibliotecários a manterem o histórico atualizado, mas sem precisar guardar todos os livros.',
+                    'Super-Nodes: Eles são como bibliotecários experientes, com mais poder e responsabilidade, capazes de verificar e aprovar transações com rapidez.'
+                ],
+                formatText: "styleTextAfterColon"
+            },
+            {
+                id: "h2",
+                text: 'Ethereum: A Evolução do Blockchain'
+            },
+            {
+                id: "paragraph",
+                text: 'Se o Bitcoin foi o pioneiro no uso da blockchain para dinheiro digital, o Ethereum levou as coisas a um novo nível. Criado por Vitalik Buterin, o Ethereum não é apenas sobre enviar dinheiro; ele também permite a criação de programas chamados "smart contracts" (ou contratos inteligentes).'
+            },
+            {
+                id: "h3",
+                text: 'O Que é um Smart Contract?'
+            },
+            {
+                id: "paragraph",
+                text: 'Pense em um smart contract como uma máquina de vendas automática. Quando você insere o dinheiro, a máquina verifica o valor e, se tudo estiver certo, entrega o produto. Um smart contract funciona da mesma forma, só que digitalmente. Esses contratos são armazenados na blockchain e executam automaticamente os termos que foram programados, sem precisar de intermediários.'
+            },
+            {
+                id: "paragraph",
+                text: 'Por exemplo, imagine que você quer vender sua bicicleta. Em vez de confiar em um site para mediar a venda, você pode usar um smart contract. Assim que o comprador envia o pagamento, o contrato automaticamente transfere a propriedade da bicicleta para ele.'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/e45ed17e-5ccb-4d70-ae9c-41707fbeb397.jpg',
+                altImage: 'Analogia de um smart contract como uma máquina de vendas automática.',
+            },
+            {
+                id: "h3",
+                text: 'Por Que Isso é Importante?'
+            },
+            {
+                id: "paragraph",
+                text: 'Os smart contracts são usados para muito mais do que apenas vendas. Eles podem ser aplicados em jogos, finanças, rastreamento de produtos, NFTs (tokens não-fungíveis) e uma série de outras coisas. E o melhor de tudo: uma vez que o contrato é colocado em produção, ele não pode ser alterado, garantindo total transparência e segurança.'
+            },
+            {
+                id: "h2",
+                text: 'Blockchain Trilema: Escolhendo Prioridades'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/196dd015-fb2f-47b6-9221-2907e83b8924.jpg',
+                altImage: 'Imagem de várias pedras empilhadas, representando o trilema do blockchain.',
+            },
+            {
+                id: "paragraph",
+                text: 'Agora, vamos falar sobre um desafio interessante que os desenvolvedores enfrentam ao trabalhar com blockchains, chamado de "trilema". Esse termo é usado para descrever o fato de que é difícil para uma blockchain ser escalável, segura e descentralizada ao mesmo tempo. Em outras palavras, normalmente, uma blockchain precisa priorizar dois desses aspectos e comprometer o terceiro.'
+            },
+            {
+                id: "paragraph",
+                text: 'Por exemplo, o Bitcoin e o Ethereum são extremamente seguros e descentralizados, mas não são os sistemas mais rápidos ou escaláveis.'
+            },
+            {
+                id: "h2",
+                text: 'Criptomoedas: Bitcoin, Ether e Muito Mais'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/0c545941-fb85-4772-a457-b88ac39a4f5c.jpg',
+                altImage: 'Imagem de várias criptomoedas Bitcoin na mão de uma pessoa.',
+            },
+            {
+                id: "paragraph",
+                text: 'Criptomoedas são como moedas digitais que utilizam criptografia para garantir transações seguras. O Bitcoin foi a primeira, mas existem muitas outras, conhecidas como altcoins, como Litecoin, Solana e Cardano. Algumas delas são variações do Bitcoin, enquanto outras, como o Ethereum, foram criadas do zero.'
+            },
+            {
+                id: "h3",
+                text: 'Criptomoedas e Tokens'
+            },
+            {
+                id: "paragraph",
+                text: 'Além das criptomoedas, existem também os tokens, que são criados dentro de uma blockchain existente. Um exemplo de token é o USDT'
+            },
+            {
+                id: "paragraph",
+                text: '(Tether), que é atrelado ao valor do dólar americano, oferecendo uma forma estável de negociar dentro do mundo das criptomoedas.'
+            },
+            {
+                id: "h3",
+                text: 'É Seguro Investir em Criptomoedas?'
+            },
+            {
+                id: "paragraph",
+                text: 'Assim como qualquer investimento, o mercado de criptomoedas tem seus riscos. Algumas criptomoedas podem ser voláteis, com preços que sobem e descem rapidamente. Além disso, sempre há o perigo de golpes, como esquemas de pirâmide, ou ataques de hackers. Por isso, é importante fazer sua pesquisa e, se possível, começar com pequenas quantias.'
+            },
+            {
+                id: "paragraph",
+                text: 'Para negociar criptomoedas, você pode usar exchanges (corretoras online) ou fazer transações diretas com outras pessoas (P2P). Mas lembre-se, sempre com cautela!'
+            },
+            {
+                id: "h2",
+                text: 'O Futuro do Blockchain: Inovações e Aplicações'
+            },
+            {
+                id: "paragraph",
+                text: 'O blockchain não é apenas sobre criptomoedas; suas aplicações são vastas e em constante crescimento. Para superar o trilema que mencionamos, novas soluções estão surgindo, como as camadas adicionais (Layers) e os "rollups". Essas tecnologias ajudam a processar transações de forma mais rápida e eficiente, o que é essencial para o crescimento e adoção do blockchain em larga escala.'
+            },
+            {
+                id: "h3",
+                text: 'Exemplos de Aplicações no Dia a Dia'
+            },
+            {
+                id: 'bullet',
+                items: [
+                    'Rastreamento de Produtos: Blockchain pode ser usado para rastrear a origem de produtos, como alimentos, garantindo que você saiba exatamente de onde veio o que está consumindo.',
+                    'Identidade Digital: Pode ajudar a criar identidades digitais seguras e imutáveis, protegendo informações pessoais e eliminando a necessidade de vários logins e senhas.',
+                    'Jogos Online: Muitos jogos agora utilizam blockchain para garantir que itens virtuais, como skins e armas, sejam realmente de propriedade do jogador e possam ser trocados de forma segura.'
+                ],
+                formatText: "styleTextAfterColon"
+            },
+        ]
+    },
+    {
+        id: "h1",
+        cover: "https://hermes.dio.me/articles/cover/60772e6d-b04e-46e3-9f5e-ca1655084f3c.png",
+        datePost: format(new Date(2024, 6, 31), "dd MMMM, yyyy", { locale: ptBR }),
+        title: 'Web3: O Que É e Como Funciona a Internet Descentralizada',
+        subtitle: 'Descubra como a Web3 está revolucionando a internet, dando a você o controle total sobre seus dados e criando uma rede verdadeiramente democrática e sem censura.',
+        content: [
+            {
+                id: "paragraph",
+                text: "Você já ouviu falar em Web3? Se ainda não, prepare-se para descobrir uma nova era da internet que vem crescendo a cada dia. Na internet que conhecemos hoje, grandes corporações acabam se tornando proprietárias dos nossos dados. É como se você construísse uma casa em um terreno alugado – a qualquer momento, o verdadeiro dono pode aparecer e tomar o terreno de volta. Agora imagine uma internet onde você realmente possui o terreno em que construiu sua casa. Bem-vindo ao mundo da Web3!"
+            },
+            {
+                id: "h2",
+                text: "O que é Web3"
+            },
+            {
+                id: "paragraph",
+                text: 'A Web3 é a próxima evolução da internet, prometendo ser mais aberta, transparente e descentralizada. Ao contrário da internet atual, controlada por grandes empresas, a Web3 funciona através de blockchains, criando uma rede governada pelo coletivo. É um novo paradigma onde a internet é gerida por seus próprios usuários, e não por interesses corporativos.'
+            },
+            {
+                id: "h2",
+                text: "Evolução da Web"
+            },
+            {
+                id: "h3",
+                text: "Web 1.0 - Leitura"
+            },
+            {
+                id: "paragraph",
+                text: 'A primeira fase da internet, conhecida como Web 1.0, era como ler um livro. Era estática e sem interação. Você acessava portais empresariais, blogs e notícias, mas não podia interagir muito. Era como passear por uma biblioteca cheia de livros, mas sem poder conversar com outros leitores.'
+            },
+            {
+                id: "h3",
+                text: "Web 2.0 - Leitura e escrita"
+            },
+            {
+                id: "paragraph",
+                text: 'A Web 2.0 trouxe a dinamicidade. Agora, além de ler, você podia escrever e interagir. Redes sociais e plataformas como Facebook e YouTube surgiram, permitindo que todos pudessem criar conteúdo. No entanto, todo esse conteúdo estava em "terreno alugado" – pertencendo às plataformas, não a você.'
+            },
+            {
+                id: "h3",
+                text: "Web 3.0 - Leitura, escrita e propriedade"
+            },
+            {
+                id: "paragraph",
+                text: 'Bem-vindo à Web 3.0! Nesta nova era, você não só lê e escreve, mas também tem a propriedade sobre suas informações. Com o uso de tokens e blockchain, a Web3 elimina intermediários e garante que suas informações sejam suas de verdade, sem a possibilidade de alterações por grandes corporações.'
+            },
+            {
+                id: "h2",
+                text: "Economia de Propriedade"
+            },
+            {
+                id: "paragraph",
+                text: 'Na Web3, a propriedade é real. Isso significa que os ativos digitais são seus, não de terceiros, permitindo um autogerenciamento total. A blockchain traz uma confiança baseada no código, sem a necessidade de confiar em pessoas ou intermediários. Isso proporciona imutabilidade e evita censura. Se você já ouviu que "se o serviço é de graça, você é o produto", a Web3 vem para mudar isso, garantindo a propriedade do valor.'
+            },
+            {
+                id: "h2",
+                text: "Por Que a Web3 Importa"
+            },
+            {
+                id: "paragraph",
+                text: 'A Web3 é fundamental por várias razões:'
+            },
+            {
+                id: "bullet",
+                "items": [
+                    "Construção de uma Internet de Propriedade: Sem intermediários, você tem o controle total.",
+                    'Democratização do Acesso: Poder e controle distribuídos entre todos os usuários.',
+                    'Resistência à Censura: Seus dados permanecem íntegros e livres de manipulação.',
+                    'Nova Economia: Uma economia digital onde você realmente possui e controla seus ativos.'
+                ],
+                formatText: "styleTextAfterColon"
+            },
+            {
+                id: "paragraph",
+                text: 'A Web3 promete transformar a forma como interagimos com a internet, tornando-a mais justa, segura e verdadeiramente nossa. Está pronto para embarcar nessa nova era digital?'
+            },
+        ]
+    },
+    {
+        id: "h1",
+        cover: "https://hermes.dio.me/articles/cover/eb9eb11d-205d-4bfa-b4c9-e50c0f48a463.png",
+        datePost: format(new Date(2024, 5, 11), "dd MMMM, yyyy", { locale: ptBR }),
+        title: 'Amazon Bedrock: Transformando Sonhos em Realidade na Era da Inteligência Artificial',
+        subtitle: 'Descubra como o Amazon Bedrock pode impulsionar a inovação no Brasil, transformando sonhos em realidade na era da inteligência artificial.',
+        content: [
+            {
+                id: "paragraph",
+                text: "No mundo dinâmico e competitivo de hoje, as empresas estão constantemente buscando novas maneiras de se destacar, aumentar a produtividade e tomar decisões mais inteligentes. O Amazon Bedrock, a plataforma de inteligência artificial generativa (IA generativa) da Amazon Web Services (AWS), chegou ao Brasil e promete revolucionar a forma como as empresas brasileiras podem desenvolver, treinar e implantar modelos de IA, proporcionando uma nova era de inovação e oportunidades."
+            },
+            {
+                id: "h2",
+                text: "Entendendo o Amazon Bedrock"
+            },
+            {
+                id: "paragraph",
+                text: 'O Amazon Bedrock é um serviço gerenciado que facilita a vida dos desenvolvedores e empresas de todos os tamanhos. Com uma interface fácil de usar e APIs simples, você pode criar aplicativos inteligentes usando os melhores modelos de IA disponíveis. Além disso, você pode personalizar esses modelos com seus próprios dados de forma segura, usando técnicas como ajuste fino e Geração Aumentada de Recuperação (RAG). Isso permite criar agentes que executam tarefas com eficiência, utilizando seus sistemas corporativos e fontes de dados.'
+            },
+            {
+                id: "h2",
+                text: "Benefícios do Amazon Bedrock para o Brasil"
+            },
+            {
+                id: "h3",
+                text: "Para empresas"
+            },
+            {
+                id: "bullet",
+                "items": [
+                    "Aumento da Competitividade: Com o Amazon Bedrock, as empresas brasileiras podem competir de igual para igual com gigantes globais, criando aplicações inteligentes e super inovadoras. Imagine só as possibilidades!",
+                    'Desenvolvimento de Novos Produtos e Serviços: A IA generativa abre um mundo de oportunidades para criar produtos e serviços inéditos, perfeitos para as necessidades do mercado brasileiro. Quem sabe o próximo grande lançamento não vem daqui?',
+                    'Redução de Custos: Automatizar tarefas e otimizar processos ajuda a cortar custos operacionais, tornando as empresas mais eficientes e lucrativas. E quem não gosta de ver a conta bancária crescer?',
+                    'Melhoria na Experiência do Cliente: Com chatbots inteligentes, interações personalizadas e suporte 24/7, a experiência do cliente vai para outro nível. Seus clientes vão se sentir VIPs o tempo todo!'
+                ],
+                formatText: "styleTextAfterColon"
+            },
+            {
+                id: "h3",
+                text: "Para usuários comuns"
+            },
+            {
+                id: "bullet",
+                "items": [
+                    "Novos serviços e soluções: A IA generativa abre as portas para um mundo de novas tecnologias! Pense em como isso pode impactar sua vida - desde educação e saúde até entretenimento e muito mais!",
+                    'Melhoria na qualidade de vida: Imagine ter ferramentas inteligentes que tornam suas tarefas diárias mais fáceis e rápidas, dando um boost na sua produtividade. Parece um sonho, né?',
+                    'Inclusão social: E se a IA pudesse ajudar a tornar o mundo mais acessível para todos? Com soluções inteligentes, podemos facilitar o acesso à informação e aos serviços, promovendo a inclusão de pessoas com deficiência e aquelas que enfrentam desafios extras.',
+                    'Estímulo à criatividade: Já pensou em ter uma ajudinha da IA para despertar seu lado artístico? Com ferramentas que geram poemas, músicas e textos, você pode descobrir talentos que nem sabia que tinha!'
+                ],
+                formatText: "styleTextAfterColon"
+            },
+            {
+                id: "h2",
+                text: "Casos de uso do Amazon Bedrock no Brasil"
+            },
+            {
+                id: "bullet",
+                "items": [
+                    "E-commerce: Imagine se toda vez que você entrasse em um site de compras, ele soubesse exatamente o que você está procurando e oferecesse sugestões personalizadas feitas sob medida para você. É como se fosse a Amazon Prime, só que com um toque especial que torna sua experiência de compra ainda mais incrível!",
+                    'Saúde: Já pensou se os médicos tivessem uma ferramenta mágica que lhes desse insights valiosos sobre seus pacientes, ajudando-os a diagnosticar doenças mais rapidamente e a escolher o tratamento mais eficaz? Isso poderia significar salvar vidas de uma maneira mais eficiente e personalizada!',
+                    'Finanças: E se cada transação financeira fosse analisada minuciosamente para detectar qualquer sinal de fraude ou comportamento suspeito? Isso poderia garantir que seu dinheiro esteja sempre seguro e protegido, trazendo mais tranquilidade para suas finanças.',
+                    'Manufatura: E se as fábricas tivessem uma maneira de otimizar toda a cadeia de suprimentos e prever quando os equipamentos precisam de manutenção, evitando paradas não planejadas e aumentando a eficiência da produção? Isso poderia revolucionar a maneira como os produtos são fabricados, tornando as operações mais ágeis e econômicas.'
+                ],
+                formatText: "styleTextAfterColon"
+            },
+            {
+                id: "paragraph",
+                text: 'Se você quer impulsionar sua transformação digital e ter uma vantagem competitiva, o Amazon Bedrock é a peça que faltava no seu quebra-cabeça tecnológico. Não perca a chance de explorar essa plataforma incrível e descobrir como ela pode beneficiar sua empresa hoje!'
+            },
+            {
+                id: "link",
+                text: "Amazon Bedrock",
+                "url": "https://aws.amazon.com/bedrock/"
+            },
+        ]
+    },
+    {
+        id: "h1",
+        cover: "https://hermes.dio.me/articles/cover/e758e0d6-e41b-476e-b871-0b999894d785.png",
+        datePost: format(new Date(2023, 5, 16), "dd MMMM, yyyy", { locale: ptBR }),
+        title: 'Internet: Do www ao .com: Um Olhar Profundo sobre o DNS e sua Hierarquia',
+        subtitle: 'Conheça a hierarquia do Domain Name System (DNS), um sistema vital para a nossa busca por recursos na web.',
+        content: [
+            {
+                id: "paragraph",
+                text: "Navegar na internet se tornou uma tarefa relativamente simples. Para acessar um site, por exemplo, basta digitar o seu endereço na barra de pesquisa, confirmar e testemunhar a magia acontecer. No entanto, existe um sistema fundamental que torna possível alcançar o destino desejado. Esse sistema é chamado de Domain Name System (DNS). Neste artigo, vamos entender como esse sistema vital funciona, revelando detalhes ocultos por trás das brilhantes telas que nos conectam a cada clique."
+            },
+            {
+                id: "h2",
+                text: "O Papel do DNS: Traduzindo Nomes de Domínio em Endereços IP"
+            },
+            {
+                id: "paragraph",
+                text: 'Ao navegar na internet, utilizamos nomes de domínio legíveis, como o clássico google.com, para encontrar o que procuramos. No entanto, as máquinas e computadores não entendem esses nomes diretamente; eles operam com números. É aí que entra o Domain Name System, ou DNS. O DNS desempenha um papel crucial ao traduzir o endereço que digitamos em um nome de domínio para um endereço IP, que é uma sequência numérica compreendida pelos computadores e utilizada para localizar e acessar o recurso desejado. Veja um exemplo disso na imagem abaixo:'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/9735d5ed-8c97-4df8-9f6c-d7d31a543cf6.png',
+                altImage: 'Ilustração do endereço legível google.com sendo traduzido para um endereço IP numérico.',
+            },
+            {
+                id: "paragraph",
+                text: 'Agora que compreendemos o que o DNS faz, vamos nos aprofundar na hierarquia desse sistema. Para isso, vamos continuar usando o endereço que você viu acima e que todos nós, meros terráqueos, conhecemos muito bem: o google.com. Vamos ler esse endereço, a partir de agora, de trás para frente.'
+            },
+            {
+                id: "h2",
+                text: 'A Hierarquia do DNS: Desvendando os Root servers e Além Root servers: Os Pilares Fundamentais do Sistema DNS'
+            },
+            {
+                id: "paragraph",
+                text: 'Quando digitamos google.com em nosso navegador, geralmente não percebemos, mas existe um "." no final. Esse ponto é uma referência a um conjunto especial de servidores chamados Servidores-raiz (Root servers). No mundo, existem 13 (treze) conjuntos desses servidores, totalizando mais de 1000. Os Servidores-raiz têm a capacidade de localizar qualquer domínio no mundo. O gerenciamento desses servidores é realizado por diversas organizações, incluindo universidades, instituições governamentais e entidades sem fins lucrativos. Gostaria de saber quem opera cada um deles? Você pode encontrar mais informações no link a seguir: www.iana.org/domains/root/servers'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/0c87d430-a671-4497-bbdd-447c7a6b47a6.png',
+                altImage: 'Ilustração dos servidores-raiz (Root servers).',
+            },
+            {
+                id: "h3",
+                text: "gTLDs: Os Sufixos que Identificam os Tipos de Sites na Web"
+            },
+            {
+                id: "paragraph",
+                text: 'Observe o “.com” do nosso endereço. Esse “.com” é o que chamamos de Generic Top-level Domain, ou gTLD. Os gTLDs são os sufixos de domínio mais comuns, como o próprio “.com”, “.org”, “.gov”, entre outros. Eles são gerenciados por organizações específicas chamadas registries, que definem e controlam as políticas para os nomes de domínio dentro de cada gTLD mencionado.'
+            },
+            {
+                id: "paragraph",
+                text: 'Cada gTLD tem funções diferentes. O nosso ".com", por exemplo, indica que aquele recurso é destinado para fins comerciais. Além desse, existem também os gTLDs mais específicos, como ".edu" para instituições educacionais e ".gov" para entidades governamentais.'
+            },
+            {
+                id: "paragraph",
+                text: 'Há também outro TLD chamado Country Code Top-Level Domains, ou ccTLD. Esse, não presente no domínio google.com, refere-se um país ou território específico na estrutura do DNS. Por exemplo, aqui no Brasil utilizamos o ".br", enquanto o ccTLD ".de" é usado para representar a Alemanha. Eles ficam do lado direito do gTLD.'
+            },
+            {
+                id: "paragraph",
+                text: 'Vamos entender tudo isso com um exemplo didático. Pense no DNS como a Netflix. Os gTLDs seriam as categorias da Netflix, como "Comércio" (.com), "Organizações" (.org), "Entidades Governamentais" (.gov), entre outros. Cada categoria agrupa vários tipos de filmes e séries (ou, no caso do DNS, diferentes tipos de sites) com base em suas características ou propósitos. Nesse contexto, os ccTLDs seriam os diferentes países onde a Netflix está disponível.'
+            },
+            {
+                id: "h3",
+                text: "SLDs: A Personalização dos Endereços na Web"
+            },
+            {
+                id: "paragraph",
+                text: 'Os Domínios de Nível Secundário, ou SLDs, são os componentes diretamente à esquerda do gTLD. No nosso caso, chegamos ao "google" no endereço google.com. Essa é uma parte personalizável do domínio, identificando o indivíduo, empresa ou organização por trás daquele site. Se você pensou que a empresa por trás do domínio google.com é a própria Google, parabéns! Você é um verdadeiro Sherlock Holmes! (hehe).'
+            },
+            {
+                id: "paragraph",
+                text: 'Os SLDs são significativos, pois refletem o nome da empresa, marca, produto, serviço ou qualquer outra identificação relevante para seu proprietário. A operação e controle desse componente estão sob os cuidados dos registradores de domínio autorizados. Eles são os intermediários entre os usuários finais e os registries dos TLDs. O papel deles é permitir que os usuários escolham e registrem nomes de domínio dentro dos TLDs disponíveis.'
+            },
+            {
+                id: "h3",
+                text: "Subdomínios: Criando Seções Específicas no seu Domínio"
+            },
+            {
+                id: "paragraph",
+                text: 'Os subdomínios são os nomes que aparecem à esquerda do SLD (Second-Level Domain). Eles servem para organizar o conteúdo do site em seções distintas e personalizadas. No caso do google.com, você pode notar que não há nada à esquerda. No entanto, é comum, embora não visível, o uso do subdomínio "www" como padrão quando não é especificado diretamente. O subdomínio "www" é usado para identificar a parte do site destinada à World Wide Web.'
+            },
+            {
+                id: "h2",
+                text: "Conclusão"
+            },
+            {
+                id: "paragraph",
+                text: 'Se você chegou até aqui, você pôde ver o papel fundamental do sistema DNS (Domain Name System) na infraestrutura da internet, possibilitando que qualquer usuário acesse sites por nomes fáceis em vez de endereços IP complexos. Também exploramos os principais elementos desse sistema. Vamos relembrar?'
+            },
+            {
+                id: "paragraph",
+                text: 'Os servidores-raiz, espalhados globalmente, são os pontos de partida na resolução de nomes de domínio. Com eles, temos as coordenadas (no caso, o endereço IP) dos servidores de cada TLD (Top-level Domain). Esses servidores serão capazes de direcionar as consultas para os servidores gTLDs (Generic Top-level Domain) e ccTLDs.'
+            },
+            {
+                id: "paragraph",
+                text: 'Em seguida, falamos sobre os SLDs (Domínios de Nível Secundário), que são os nomes personalizados escolhidos pelos proprietários dos sites. Os SLDs são registrados pelos registradores de domínio autorizados e podem ser combinados com subdomínios para criar uma estrutura mais complexa e segmentada para o seu site.'
+            },
+            {
+                id: "paragraph",
+                text: 'Em conjunto, esses componentes formam a hierarquia DNS, proporcionando uma experiência de navegação amigável e acessível na internet. Compreender esses conceitos nos ajuda a melhorar nossa compreensão do funcionamento por trás dos sites que visitamos diariamente.'
+            },
+            {
+                id: "h2",
+                text: "Referências"
+            },
+            {
+                id: "link",
+                text: "How DNS Works",
+                "url": "https://howdns.works/pt-br/"
+            },
+            {
+                id: "link",
+                text: "What is DNS?",
+                "url": "https://www.cloudflare.com/pt-br/learning/dns/what-is-dns/"
+            },
+            {
+                id: "link",
+                text: "What is a Domain Name?",
+                "url": "https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name"
+            },
+            {
+                id: "link",
+                text: "Curso de Redes - O que é DNS - Domain Name System",
+                "url": "https://www.youtube.com/watch?v=oukRwnVAamo"
+            },
+        ]
+    },
+    {
+        id: "h1",
+        cover: "https://hermes.dio.me/articles/cover/c1b7f860-b51e-4239-81c7-d76d04cebd00.png",
+        datePost: format(new Date(2023, 2, 9), "dd MMMM, yyyy", { locale: ptBR }),
+        title: 'Inteligência Artifical: Como Usar O ChatGPT Nos Seus Estudos de Programação',
+        subtitle: 'ChatGPT: A revolução da IA na produtividade - 100 milhões de usuários em 2 meses. Descubra como usá-lo em seus estudos de programação!',
+        content: [
+            {
+                id: "paragraph",
+                text: "Nos últimos meses, o ChatGPT, chatbot com IA (Inteligência Artificial) da empresa OpenAI, vem ganhando muita notoriedade pelo seu poder em fazer seus usuários realizarem suas tarefas com alta produtividade. Apenas no mês de janeiro desse ano (2023), essa ferramenta chegou ao incrível número de 100 milhões de usuários ativos (Reuters), dois meses após seu lançamento (novembro de 2022)."
+            },
+            {
+                id: "paragraph",
+                text: 'Sem dúvida, o alto uso dessa tecnologia é um indício que ela realmente funciona (tendo seus erros de vez em quando, é claro). "Tá, mas como eu posso usar o ChatGPT nos meus estudos de programação?" Hoje, te mostrarei duas formas que venho utilizando e que me ajudam a entender, relembrar e até aplicar os conteúdos que estudo (no meu caso, sobre o Front-End). Mas, antes de iniciar, se você caiu aqui de paraquedas e não faz a mínima ideia do que estamos falando, chegou o seu momento!'
+            },
+            {
+                id: "h2",
+                text: "ChatGPT: o que é isso e quais foram seus feitos"
+            },
+            {
+                id: "paragraph",
+                text: 'De formas simples, o ChatGPT é um sistema de IA (Inteligência Artificial) que aprende a gerar e processar textos baseado em exemplos de treinamento. Esse treinamento foi realizado pela própria OpenAI com uma grande quantidade de informações da internet. Essa tecnologia é usada como um chatbot (como se você estivesse mandando mensagem de texto pro seu "boysinho" ou "boysinha" hehe). Para experimentar, você pode clicar aqui.'
+            },
+            {
+                id: "paragraph",
+                text: 'Muita gente colocou em testes as habilidades do ChatGPT e, cada vez mais, ele vem mostrando que dá conta do recado! Veja abaixo dois incríveis feitos que ele foi capaz de realizar:'
+            },
+            {
+                id: 'bullet',
+                items: [
+                    'Escrever uma redação do Enem em 50 segundos | G1',
+                    'Conseguir a aprovação na primeira fase da OAB | Migalhas'
+                ],
+                formatText: "styleTextAfterColon"
+            },
+            {
+                id: "paragraph",
+                text: 'Agora que conhecemos esse software fenomenal, vamos para as formas de utilizá-lo em nossos estudos!'
+            },
+            {
+                id: "h2",
+                text: "1 - Bugou? Peça explicação!"
+            },
+            {
+                id: "paragraph",
+                text: 'Sabe quando você lê algum conteúdo (documentação, artigos, etc) várias vezes e mesmo assim não entende? Você pode pedir (com delicadeza, é claro) para o ChatGPT te explicar aquele determinado conteúdo de uma forma mais didática e simples. Isso pode te ajudar a entender melhor o que você está estudando. Vamos de exemplo?'
+            },
+            {
+                id: "paragraph",
+                text: 'Estudando sobre navegadores em um artigo antigo, achei complicado entender a estrutura deles. Pedi para o ChatGPT me explicar e ele me deu uma resposta bem didática. Com isso, consegui entender melhor o conteúdo. Faça o teste você também!'
+            },
+            {
+                id: "h2",
+                text: "2 - Conteúdo enorme? Resuma!"
+            },
+            {
+                id: "paragraph",
+                text: 'Se você estuda escrevendo como eu, isso pode te ajudar! É bem comum fazermos anotações ou até resumos de assuntos para lermos depois. Mas imagina ler um texto enorme e depois fazer isso? Agora, você pode utilizar a ajuda da Inteligência Artificial para resumir esses textos e facilitar sua vida! Vamos de mais um exemplo?'
+            },
+            {
+                id: "paragraph",
+                text: 'Ainda sobre os navegadores, encontrei um texto enorme sobre eles. Pedi para o ChatGPT resumir e ele me deu um resumo bem bacana. Com isso, consegui ter uma visão geral do conteúdo e, se precisar, posso me aprofundar mais. Faça o teste você também!'
+            },
+            {
+                id: "h2",
+                text: "Conclusão"
+            },
+            {
+                id: "paragraph",
+                text: 'Esse software vem crescendo (não só em usuários, mas em informações). Essa e outras tecnologias podem sim nos ajudar de diversas maneiras. Duas dessas maneiras eu mostrei a você hoje. Espero ter te ajudado! Deixe aqui nos comentários se você já utilizava essa ferramenta e como fazia isso (seja nos seus estudos ou em outras áreas). Isso pode ajudar outras pessoas!'
+            },
+            {
+                id: "paragraph",
+                text: 'Uma informação importante sobre os resultados do ChatGPT é que erros podem acontecer (a própria OpenAI deixa claro isso). Então, fique atento! E pra finalizar: "hasta la vista, baby!" (pegou a referência? 🤖)'
+            },
+        ]
+    },
+    {
+        id: "h1",
+        cover: "https://hermes.dio.me/articles/cover/4107bd6b-b0b4-43d0-9c73-03b5ba45aa45.png",
+        datePost: format(new Date(2023, 1, 17), "dd MMMM, yyyy", { locale: ptBR }),
+        title: 'Internet: Entenda as Formas de Transmissão de Dados Através Da Internet',
+        subtitle: 'Descubra as 3 formas cruciais de comunicação na internet em nosso mundo repleto de bits! Dados incríveis revelados.',
+        content: [
+            {
+                id: "paragraph",
+                text: "Utilizar a internet como mecanismo de comunicação se tornou algo vital nas nossas vidas. Enviar mensagens, áudios, vídeos ou qualquer outro mecanismo de comunicação é tão comum quanto nos alimentarmos! Um levantamento (Data Never Sleeps) realizado em 2020 pela empresa Domo, empresa especializada em comunicação na nuvem, a cada minuto, 347 mil novos Stories são postados no Instagram, 147 mil fotos são publicadas no Facebook e 41 milhões de mensagens são enviadas no WhatsApp. Impressionante, não acha?"
+            },
+            {
+                id: "paragraph",
+                text: 'Como que todos esses dados são transmitidos pela internet? Hoje, de forma simples e didática, você saberá as três formas comuns utilizadas na nossa comunicação pela internet. Mas, antes de começarmos, um conceito muito importante será preciso ser entendido. São os nossos novos amiguinhos: os bits.'
+            },
+            {
+                id: "h2",
+                text: "Bits: os átomos da informação"
+            },
+            {
+                id: "paragraph",
+                text: 'Você lembra o que é um átomo? Na escola, aprendemos que átomo é a "menor unidade que encontramos em uma matéria". Da mesma forma, no mundo da tecnologia, a menor unidade que encontramos são os bits. Apenas um deles (bit), também chamado de dígito binário, aceita apenas dois valores: 0 ou 1. Em filmes tecnológicos, vemos esses amiguinhos semelhante a seguinte imagem:'
+            },
+            {
+                id: "image",
+                srcImage: 'https://www.alura.com.br/artigos/assets/sistema-codigo-binario/sistema-codigo-binario.png',
+                altImage: 'Ilustração de bits, representados por 0 e 1.',
+            },
+            {
+                id: "paragraph",
+                text: 'Esses bits são representados de três formas diferentes, dependendo da maneira como as informações são enviadas. Vamos conhecer a primeira forma e a mais comum de encontrarmos: a eletricidade.'
+            },
+            {
+                id: "h2",
+                text: "Forma 1: Eletricidade"
+            },
+            {
+                id: "paragraph",
+                text: 'Através de cabos de cobre, podemos enviar aqueles bits (vários zeros e uns) de uma maneira simples. Imagina que você tem duas lâmpadas conectadas por um fio de cobre. Acender as lâmpadas, utilizando eletricidade, por um segundo, será como estar enviando o valor 1. Por sua vez, apagar as lâmpadas, deixando de utilizar eletricidade, por um segundo, será como estar enviando o valor 0. Portanto, ligado representará o valor 1 e desligado representará o valor 0.'
+            },
+            {
+                id: "paragraph",
+                text: 'Um ponto negativo desse tipo de cabo é a sua facilidade em ter interferência. Raios, ter outro cabo elétrico junto ou ter um cabo muito longo faz com que problemas de sinal e até perca de dados possam acontecer.'
+            },
+            {
+                id: "paragraph",
+                text: 'Um equipamento que utiliza esse mecanismo de transmissão é o nosso queridinho roteador ou modem. O cabo Ethernet (geralmente azul), que fica atrás desse aparelho, utiliza esse mecanismo de comunicação que você viu. É por isso que você vê uma luz (geralmente verde) piscando loucamente nesse aparelho (hehe).'
+            },
+            {
+                id: "image",
+                srcImage: 'https://images.unsplash.com/photo-1606904825846-647eb07f5be2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80',
+                altImage: 'Ilustração de um roteador com um cabo Ethernet conectado.',
+            },
+            {
+                id: "h2",
+                text: "Forma 2: Luz"
+            },
+            {
+                id: "paragraph",
+                text: 'A segunda forma de transmissão dos nossos amiguinhos (bits) é a luz. Você sabe a velocidade da luz? 299.792,458 km/s! É nessa incrível velocidade que nossos amiguinhos viajarão! Como? Através de um cabo especial que chamamos de fibra óptica. Em seu interior, ele possui um filamento flexível e transparente feito de vidro ou plástico extrudido, que enviará a luz através da reflexão. Veja como ele é na seguinte imagem:'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/a0d4cf9a-af96-473f-b764-0c8679bda8fc.jpg',
+                altImage: 'Ilustração de um cabo de fibra óptica.',
+            },
+            {
+                id: "paragraph",
+                text: 'A diferenciação dos vários zeros e uns enviados por esse cabo acontecerá semelhante ao que você viu antes com o cabo de cobre. A diferença é que teremos a luz acendendo (representando o valor 1) e apagando (representando o valor 0) muito rápido! Por não utilizar eletricidade, esse cabo não sofrerá aquelas interferências dos cabos de cobre.'
+            },
+            {
+                id: "paragraph",
+                text: 'Por ser um cabo com um filamento bem sensível, apesar de possuir proteções internas, ter problemas na quebra desse filamento é uma dor de cabeça (especialmente pelo seu preço). Como a velocidade de transmissão é a marca desse cabo, normalmente é utilizado para ligar países por cabos submarinos! Esses cabos possuem proteção reforçada para aguentar ataques de animais (os tutubas nervosos, por exemplo) e a pressão atmosférica. Veja como eles são:'
+            },
+            {
+                id: "image",
+                srcImage: 'https://files.tecnoblog.net/wp-content/uploads/2018/01/Cabos-submarinos.jpg',
+                altImage: 'Ilustração de cabos submarinos.',
+            },
+            {
+                id: "image",
+                srcImage: 'https://img.olhardigital.com.br/wp-content/uploads/2021/01/Cabo-submarino.jpg',
+                altImage: 'Ilustração de cabos submarinos.',
+            },
+            {
+                id: "h2",
+                text: "Forma 3: Ondas de Rádio"
+            },
+            {
+                id: "paragraph",
+                text: 'Por meio das tecnologias sem fio (Wi-Fi, por exemplo), é possível transmitir nossos amiguinhos (bits) sem utilizarmos fios. Se você está lendo esse artigo utilizando o Wi-Fi da sua casa ou de outro lugar, saiba que sinais de rádio estão a sua volta!'
+            },
+            {
+                id: "paragraph",
+                text: 'Nossos dispositivos são transmissores e receptores de ondas. Como eles são capazes de diferenciar vários zeros e uns? Sundeep Rangan, um especialista em engenharia de informática, explica um forma simples: “Para enviar o zero, emita uma frequência X. Para enviar o um, emita uma frequência Y”. Algo parecido com isso:'
+            },
+            {
+                id: "image",
+                srcImage: 'https://i.ytimg.com/vi/PM6OotDSPFw/maxresdefault.jpg',
+                altImage: 'Ilustração de ondas de rádio.',
+            },
+            {
+                id: "paragraph",
+                text: 'Graças a essas tecnologias, temos a capacidade de ter uma conexão móvel em qualquer lugar! Apesar desse ponto positivo, um ponto negativo é que esse tipo de sinal não viaja em altas distâncias. Chega um ponto em que você tem perca de sinal ou o sinal fica completamente distorcido. É por isso que sua conexão ao Wi-Fi cai quando você está longe do roteador.'
+            },
+            {
+                id: "paragraph",
+                text: 'Depois dessa grande jornada, você conheceu um pouco o percurso que os dados fazem para chegar até o seu destino, através da eletricidade, luz e ondas de rádio. Espero ter ajudado e, caso se interesse em saber mais, deixarei as fontes usadas nesse artigo abaixo.'
+            },
+            {
+                id: "h2",
+                text: "Fontes"
+            },
+            {
+                id: "link",
+                text: "What is the Internet?",
+                "url": "https://roadmap.sh/guides/what-is-internet"
+            },
+            {
+                id: "link",
+                text: "Por onde vem a internet? Seguimos a fibra até sua casa! #Boravê 🔵Manual do Mundo",
+                "url": "https://www.youtube.com/watch?v=fYJl-7jRzuw"
+            },
+            {
+                id: "link",
+                text: "The Internet: Wires, Cables & Wifi",
+                "url": "https://www.youtube.com/watch?v=ZhEf7e4kopM&feature=youtu.be"
+            },
+            {
+                id: "link",
+                text: "Como a internet funciona? - Glad You Asked T1",
+                "url": "https://www.youtube.com/watch?v=TNQsmPf24go&t=253s"
+            }
+        ]
+    },
+    {
+        id: "h1",
+        cover: "https://hermes.dio.me/articles/cover/4ebb552f-21db-4825-ba36-f30573159577.jpg",
+        datePost: format(new Date(2022, 11, 1), "dd MMMM, yyyy", { locale: ptBR }),
+        title: 'Saiba Como Deixar Seu Perfil No GitHub Atrativo',
+        subtitle: 'Descubra como tornar seu perfil GitHub atraente e completo neste artigo especial. Deixe sua marca no mundo do código!',
+        content: [
+            {
+                id: "paragraph",
+                text: "Já entrou em algum perfil de alguém no GitHub na qual você parou, olhou e pensou: “Uau! Que insano! Queria deixar meu perfil assim...”? Hoje você vai, não apenas deixar seu perfil mais charmoso, mas vai deixá-lo estrategicamente mais atrativo e completo! Vamos lá?"
+            },
+            {
+                id: "paragraph",
+                text: 'Antes de mais nada, qual o motivo de personalizarmos nosso perfil no GitHub? Para mostrar, no mínimo, três coisas:'
+            },
+            {
+                id: 'bullet',
+                items: [
+                    'Quem você é;',
+                    'O que você faz;',
+                    'O que você sabe.'
+                ],
+            },
+            {
+                id: "h2",
+                text: "O Que Não Pode Ficar de Fora Do Seu Perfil? + Exemplos"
+            },
+            {
+                id: "h3",
+                text: "Apresentação"
+            },
+            {
+                id: "paragraph",
+                text: 'A resposta do “Quem sou eu na fila do pão?” irá preencher esse campo. Mas, lembre-se de ser breve. Deixe claro seu nome, o que você estuda, com o que trabalha (caso trabalhe) e alguma outra informação que julgar ser importante para alguém te conhecer. Veja um exemplo:'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/569bbba2-e880-4972-b3d8-91e43d825371.png',
+                altImage: 'Ilustração de um perfil no GitHub com a apresentação preenchida.',
+            },
+            {
+                id: "h3",
+                text: "Skills e/ou Tech Stack"
+            },
+            {
+                id: "paragraph",
+                text: 'Liste suas habilidade e/ou tecnologias na qual você tá estudando, trabalhando ou aprimorando. Isso vai ajudar algum(a) recrutador(a) a te conhecer mais. Pode (e é até recomendado) fazer algo “caprichado” aqui. Deixe ícones/badges das suas tecnologias que usa. Veja sugestões de sites que fornecem esses ícones/badges:'
+            },
+            {
+                id: 'link',
+                text: 'Simple Icons',
+                url: 'https://simpleicons.org/'
+            },
+            {
+                id: 'link',
+                text: 'Shields.io',
+                url: 'https://shields.io/'
+            },
+            {
+                id: 'link',
+                text: 'Devicon',
+                url: 'https://devicon.dev/'
+            },
+            {
+                id: 'link',
+                text: 'Icons8',
+                url: 'https://icons8.com.br/'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/2db11975-ebf9-42f1-b0a4-1d4939b767ad.png',
+                altImage: 'Ilustração de um perfil com as tecnologias preenchidas.',
+            },
+            {
+                id: "h3",
+                text: "GitHub Stats"
+            },
+            {
+                id: "paragraph",
+                text: 'Aqui é uma dica pra trazer um ar de “dados estatísticos” para o seu perfil. Para deixar evidente o total de commits, uso (em %) das linguagens que usa e mais, essa ferramenta é excelente! Veja um repositorio que pode te ajudar a fazer isso:'
+            },
+            {
+                id: 'link',
+                text: 'Anurag Hazra',
+                url: 'https://github.com/anuraghazra/github-readme-stats'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/2aeb7b6d-1896-4677-8751-ca5b155f56f3.png',
+                altImage: 'Ilustração de um perfil com o github stats.',
+            },
+            {
+                id: "h3",
+                text: "Contatos"
+            },
+            {
+                id: "paragraph",
+                text: 'Recrutador(a): “Gostei desse(a) profissional! Vou contatá-lo(a)!… Por telecinesia?”. Brincadeiras à parte, aqui você colocará, com todo o seu charme e delicadeza, suas informações de contato, como E-mail, LinkedIn e mais. Veja um exemplo:'
+            },
+            {
+                id: "image",
+                srcImage: 'https://hermes.dio.me/assets/articles/589f2f9b-7512-4c55-8535-3984ed1420ff.png',
+                altImage: 'Ilustração de um perfil com informações de contato.',
+            },
+            {
+                id: "paragraph",
+                text: 'E aí? Te ajudei hoje? Conte-me abaixo! Espero ter ajudado você a turbinar seu perfil no GitHub e deixar outros com aquela sua reação inicial à perfis irados: “Uau! Que insano! Queria deixar meu perfil assim…”.'
+            },
+            {
+                id: "h2",
+                text: "Exemplos de Perfis no GitHub"
+            },
+            {
+                id: "link",
+                text: "CoderJojo",
+                url: "https://github.com/coderjojo/creative-profile-readme"
+            },
+        ]
+    },
+]

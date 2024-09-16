@@ -1,0 +1,63 @@
+<div class="space-y-6">
+  <ng-container *ngFor="let item of content">
+    <ng-container [ngSwitch]="item.id">
+      <h2 class="text-2xl font-bold" *ngSwitchCase="'h2'">
+        {{ item.text }}
+      </h2>
+
+      <h3 class="text-xl font-bold" *ngSwitchCase="'h3'">{{ item.text }}</h3>
+
+      <p class="leading-7 text-muted-foreground" *ngSwitchCase="'paragraph'">
+        {{ item.text }}
+      </p>
+
+      <img
+        class="rounded-lg aspect-auto object-cover w-full shadow-lg"
+        src="{{ item.srcImage }}"
+        alt="{{ item.altImage }}"
+        *ngSwitchCase="'image'"
+      />
+
+      <ul
+        class="pl-4 space-y-3 leading-7 text-muted-foreground"
+        *ngSwitchCase="'bullet'"
+      >
+        <li
+          class="list-disc"
+          *ngFor="let bullet of item.items"
+          [innerHTML]="bullet"
+        ></li>
+      </ul>
+
+      <pre
+        class="bg-muted flex p-6 items-center rounded-lg shadow-lg border overflow-x-auto relative"
+        *ngSwitchCase="'code'"
+      >
+        <code class="text-sm">{{ item.text }}</code>
+
+        <button
+          (click)="copyToClipboard(item)"
+          class="absolute m-3 grid place-content-center top-1 right-1"
+        >
+          <lucide-angular
+            name="{{ item.isCopy ? 'copy-check' : 'copy' }}"
+            size="16"
+            class="{{ item.isCopy ? 'text-green-500' : 'text-muted-foreground' }} hover:text-primary transition"
+        />
+        </button>
+      </pre>
+
+      <p *ngSwitchCase="'link'">
+        <a
+          class="hover:border-b hover:border-primary font-light transition"
+          [href]="item.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ item.text }}</a
+        >
+      </p>
+
+      <div *ngSwitchDefault>{{ item.text }}</div>
+    </ng-container>
+  </ng-container>
+</div>

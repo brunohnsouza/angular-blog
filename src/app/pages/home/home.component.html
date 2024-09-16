@@ -1,0 +1,35 @@
+<section class="flex flex-col gap-y-24 max-w-6xl mx-auto px-4">
+  <div class="flex flex-col items-end gap-y-5">
+    <app-big-card *ngIf="database[0]" [photoCover]="database[0].cover" [photoCoverAlt]="database[0].title"
+      [cardDate]="database[0].datePost" [cardTitle]="database[0].title"
+      [cardUrl]="'/post/' + formatTitlePost(database[0].title)" [cardSubtitle]="database[0].subtitle" />
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
+    <app-small-card *ngFor="let article of paginatedData.slice(1)" [photoCover]="article.cover"
+      [cardDate]="article.datePost" [cardTitle]="article.title" [cardUrl]="'/post/' + formatTitlePost(article.title)"
+      [cardSubtitle]="article.subtitle" />
+  </div>
+
+  <div class="flex items-center justify-center gap-x-6">
+    <span class="text-sm">Página {{ currentPage }} de {{ totalPages }}</span>
+
+    <div class="flex items-center gap-x-1.5">
+      <div class="flex items-center gap-x-1.5">
+        <app-pagination-button nameIcon="chevrons-left" [disabled]="currentPage === 1" (clickAction)="firstPage()" />
+
+
+        <app-pagination-button nameIcon="chevron-left" [disabled]="currentPage === 1" (clickAction)="prevPage()" />
+
+
+        <app-pagination-button nameIcon="chevron-right" [disabled]="currentPage === totalPages"
+          (clickAction)="nextPage()" />
+
+
+        <app-pagination-button nameIcon="chevrons-right" [disabled]="currentPage === totalPages"
+          (clickAction)="lastPage()" />
+
+      </div>
+    </div>
+  </div>
+</section>

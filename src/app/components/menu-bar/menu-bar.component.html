@@ -1,52 +1,15 @@
-<div class="container__menu-bar">
-  <div class="left">
-    <a href="#app">{{ textNameBlog }}</a>
-  </div>
+<div class="max-w-6xl mx-auto px-4 flex items-center justify-between py-4">
+  <a class="text-xl font-bold flex items-center gap-x-2" [routerLink]="['']">
+    <img class="size-7" src="{{ logo }}" alt="Logo OBlog" />
+    {{ textNameBlog }}
+  </a>
 
-  <div class="right">
-    <ul>
-      <li>
-        <a
-          class="social"
-          href="https://www.linkedin.com/in/brunohnsouza"
-          target="_blank"
-          title="LinkedIn"
-        >
-          <lucide-angular
-            name="linkedin"
-            [size]="20"
-            class="my-icon"
-          ></lucide-angular>
-        </a>
-      </li>
-      <li>
-        <a
-          class="social"
-          href="https://github.com/brunohnsouza"
-          target="_blank"
-          title="GitHub"
-        >
-          <lucide-angular
-            name="github"
-            [size]="20"
-            class="my-icon"
-          ></lucide-angular>
-        </a>
-      </li>
-      <li>
-        <a
-          class="social"
-          href="https://brunosouzadev.netlify.app/"
-          target="_blank"
-          title="Portfólio"
-        >
-          <lucide-angular
-            name="globe"
-            [size]="20"
-            class="my-icon"
-          ></lucide-angular>
-        </a>
-      </li>
-    </ul>
-  </div>
+  <ul class="flex items-center gap-x-1.5">
+    <li *ngFor="let social of socialNetworks">
+      <a class="p-2 rounded-lg bg-transparent hover:bg-muted transition grid place-content-center"
+        href="{{ social.url }}" target="_blank">
+        <lucide-angular name="{{ social.icon }}" [size]="16" />
+      </a>
+    </li>
+  </ul>
 </div>

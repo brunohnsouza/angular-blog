@@ -1,78 +1,13 @@
-<header>
+<header
+  class="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/35 fixed z-1 w-full"
+>
   <app-menu-bar></app-menu-bar>
 </header>
 
-<main id="app">
-  <section class="articles">
-    <article class="articles__main-top">
-      <app-big-card
-        photoCover="https://hermes.dio.me/articles/cover/af56b66d-1e55-49d4-a006-21a578df8c57.png"
-        cardDate="21 Agosto, 2024"
-        cardTitle="Gerenciadores de Pacotes JavaScript: Como Escolher o Melhor para Seus Projetos"
-        cardUrl="https://www.dio.me/articles/gerenciadores-de-pacotes-javascript-como-escolher-o-melhor-para-seus-projetos"
-        cardDescription="
-        Entenda como ferramentas como npm, Yarn, Pnpm e Deno tornam o processo de codificação mais eficiente e organizado, permitindo que você crie projetos de forma mais ágil e estruturada."
-      ></app-big-card>
-    </article>
-
-    <article class="articles__others-bottom">
-      <app-small-card
-        photoCover="https://hermes.dio.me/articles/cover/45384d5a-2a21-4545-bb63-73ddc48b7940.png"
-        cardDate="08 Agosto, 2024"
-        cardTitle="Blockchain: O Que É e Como Está Transformando as Transações Digitais"
-        cardUrl="https://www.dio.me/articles/blockchain-o-que-e-e-como-esta-transformando-as-transacoes-digitais"
-        cardDescription="Veja como o blockchain está transformando o mundo digital, garantindo transações seguras, descentralizadas e sem intermediários. Entenda o impacto dessa tecnologia em criptomoedas, contratos inteligentes e a revolução financeira global."
-      ></app-small-card>
-      <app-small-card
-        photoCover="https://hermes.dio.me/articles/cover/60772e6d-b04e-46e3-9f5e-ca1655084f3c.png"
-        cardDate="31 Julho, 2024"
-        cardTitle="Web3: O Que É e Como Funciona a Internet Descentralizada"
-        cardUrl="https://www.dio.me/articles/web3-o-que-e-e-como-funciona-a-internet-descentralizada"
-        cardDescription="Descubra como a Web3 está revolucionando a internet, dando a você o controle total sobre seus dados e criando uma rede verdadeiramente democrática e sem censura."
-      ></app-small-card>
-      <app-small-card
-        photoCover="https://hermes.dio.me/articles/cover/eb9eb11d-205d-4bfa-b4c9-e50c0f48a463.png"
-        cardDate="11 Junho, 2024"
-        cardTitle="Amazon Bedrock: Transformando Sonhos em Realidade na Era da Inteligência Artificial"
-        cardUrl="https://www.dio.me/articles/amazon-bedrock-transformando-sonhos-em-realidade-na-era-da-inteligencia-artificial?q=274"
-        cardDescription="Descubra como o Amazon Bedrock pode impulsionar a inovação no Brasil, transformando sonhos em realidade na era da inteligência artificial."
-      ></app-small-card>
-      <app-small-card
-        photoCover="https://hermes.dio.me/articles/cover/e758e0d6-e41b-476e-b871-0b999894d785.png"
-        cardDate="16 Junho, 2023"
-        cardTitle="Do www ao .com: Um Olhar Profundo sobre o DNS e sua Hierarquia"
-        cardUrl="https://www.dio.me/articles/do-www-ao-com-um-olhar-profundo-sobre-o-dns-e-sua-hierarquia"
-        cardDescription="Conheça a hierarquia do Domain Name System (DNS), um sistema vital para a nossa busca por recursos na web."
-      ></app-small-card>
-      <app-small-card
-        photoCover="https://hermes.dio.me/articles/cover/c1b7f860-b51e-4239-81c7-d76d04cebd00.png"
-        cardDate="09 Março, 2023"
-        cardTitle="Como Usar O ChatGPT Nos Seus Estudos de Programação"
-        cardUrl="https://dio.me/articles/como-usar-o-chatgpt-nos-seus-estudos-de-programacao?q=1399"
-        cardDescription="ChatGPT: A revolução da IA na produtividade - 100 milhões de usuários em 2 meses. Descubra como usá-lo em seus estudos de programação!"
-      ></app-small-card>
-
-      <app-small-card
-        photoCover="https://hermes.dio.me/articles/cover/4107bd6b-b0b4-43d0-9c73-03b5ba45aa45.png"
-        cardDate="17 Fevereiro, 2023"
-        cardTitle="Entenda as Formas de Transmissão de Dados Através Da Internet"
-        cardUrl="https://dio.me/articles/entenda-as-formas-de-transmissao-de-dados-atraves-da-internet?q=591"
-        cardDescription="Descubra as 3 formas cruciais de comunicação na internet em nosso mundo repleto de bits! Dados incríveis revelados."
-      ></app-small-card>
-
-      <app-small-card
-        photoCover="https://hermes.dio.me/articles/cover/4ebb552f-21db-4825-ba36-f30573159577.jpg"
-        cardDate="01 Dezembro, 2022"
-        cardTitle="Saiba Como Deixar Seu Perfil No GitHub Atrativo"
-        cardUrl="https://dio.me/articles/saiba-como-deixar-seu-perfil-no-github-atrativo?q=1378"
-        cardDescription="Descubra como tornar seu perfil GitHub atraente e completo neste artigo especial. Deixe sua marca no mundo do código!"
-      ></app-small-card>
-    </article>
-  </section>
+<main class="min-h-screen py-40">
+  <router-outlet></router-outlet>
 </main>
 
 <footer>
   <app-footer></app-footer>
 </footer>
-
-<router-outlet></router-outlet>

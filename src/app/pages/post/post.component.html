@@ -1,0 +1,19 @@
+<div class="max-w-2xl mx-auto px-4 space-y-6">
+  <a [routerLink]="['']"
+    class="flex items-center gap-x-2 w-max border-b border-background hover:border-primary font-light transition">
+    <lucide-angular name="move-left" [size]="14" />
+    {{ textHomeLink }}
+  </a>
+
+  <div class="space-y-4">
+    <span class="text-sm">{{ datePost }}</span>
+
+    <h1 class="text-3xl md:text-4xl font-bold">
+      {{ title }}
+    </h1>
+  </div>
+
+  <div>
+    <app-post-content [content]="content" />
+  </div>
+</div>
