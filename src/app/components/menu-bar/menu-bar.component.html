@@ -1,5 +1,5 @@
 <div class="max-w-6xl mx-auto px-4 flex items-center justify-between py-4">
-  <a class="text-xl font-bold flex items-center gap-x-2" [routerLink]="['']">
+  <a class="text-xl roboto-bold flex items-center gap-x-2" [routerLink]="['']">
     <img class="size-7" src="{{ logo }}" alt="Logo OBlog" />
     {{ textNameBlog }}
   </a>
@@ -8,7 +8,7 @@
     <li *ngFor="let social of socialNetworks">
       <a class="p-2 rounded-lg bg-transparent hover:bg-muted transition grid place-content-center"
         href="{{ social.url }}" target="_blank">
-        <lucide-angular name="{{ social.icon }}" [size]="16" />
+        <lucide-angular name="{{ social.icon }}" class="h-[1.2rem] w-[1.2rem] shrink-0" />
       </a>
     </li>
   </ul>

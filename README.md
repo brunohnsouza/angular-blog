@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="#objetivo">Objetivo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#tecnologias">Ferramentas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#ferramentas">Ferramentas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#layout">Layout</a>
 </p>
@@ -29,10 +29,10 @@
 
 - [Angular](https://angular.io/) v16
 - [TypeScript](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html) v5
+- [Tailwind CSS](https://tailwindcss.com/) v3
+- [date-fns](https://date-fns.org/) v3
 - HTML e CSS
 - Git e GitHub
-- [Fontshare](https://www.fontshare.com/)
-- [Phosphoricons](https://phosphoricons.com/)
 
 <h2 id="projeto">💻 <b>Projeto:</b></h2>
 
