@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, type Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PostComponent } from './pages/post/post.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'post/:id',
     component: PostComponent,
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
   },
   {
     path: '**',

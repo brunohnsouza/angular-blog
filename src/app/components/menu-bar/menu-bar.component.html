@@ -5,6 +5,15 @@
   </a>
 
   <ul class="flex items-center gap-x-1.5">
+    <li>
+      <a class="p-2 rounded-lg bg-transparent hover:bg-muted transition grid place-content-center"
+        [routerLink]="'/search'">
+        <lucide-angular name="search" class="h-[1.2rem] w-[1.2rem] shrink-0" />
+      </a>
+    </li>
+
+    <div class="w-px h-6 bg-border hidden md:block"></div>
+
     <li *ngFor="let social of socialNetworks">
       <a class="p-2 rounded-lg bg-transparent hover:bg-muted transition grid place-content-center"
         href="{{ social.url }}" target="_blank">

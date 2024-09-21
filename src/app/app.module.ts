@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { LucideAngularModule, Linkedin, Github, Globe, MoveLeft, Copy, CopyCheck, ChevronsRight, ChevronsLeft, ChevronRight, ChevronLeft } from 'lucide-angular';
+import { LucideAngularModule, Linkedin, Github, Globe, MoveLeft, Copy, CopyCheck, ChevronsRight, ChevronsLeft, ChevronRight, ChevronLeft, Search } from 'lucide-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { PostComponent } from './pages/post/post.component';
 import { PostContentComponent } from './pages/post/components/post-content/post-content.component';
 import { PaginationButtonComponent } from './pages/home/components/pagination-buttons/pagination-buttons.component';
+import { SearchComponent } from './pages/search/search.component';
+import { SearchInputComponent } from './pages/search/components/search-input/search-input.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,11 +28,14 @@ import { PaginationButtonComponent } from './pages/home/components/pagination-bu
     PostComponent,
     PostContentComponent,
     PaginationButtonComponent,
+    SearchComponent,
+    SearchInputComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LucideAngularModule.pick({ Linkedin, Github, Globe, MoveLeft, Copy, CopyCheck, ChevronsRight, ChevronsLeft, ChevronRight, ChevronLeft }),
+    LucideAngularModule.pick({ Linkedin, Github, Globe, MoveLeft, Copy, CopyCheck, ChevronsRight, ChevronsLeft, ChevronRight, ChevronLeft, Search }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
