@@ -18,21 +18,15 @@
         <li class="list-disc roboto-mono-regular" *ngFor="let bullet of item.items" [innerHTML]="bullet"></li>
       </ul>
 
-      <pre class="bg-muted flex p-6 items-center rounded-lg shadow-lg border overflow-x-auto relative"
-        *ngSwitchCase="'code'">
-        <code class="text-sm">{{ item.text }}</code>
+      <div class="relative">
+        <pre *ngSwitchCase="'code'" class="shadow-lg rounded-lg bg-muted">
 
-        <button
-          (click)="copyToClipboard(item)"
-          class="absolute m-3 grid place-content-center top-1 right-1"
-        >
-          <lucide-angular
-            name="{{ item.isCopy ? 'copy-check' : 'copy' }}"
-            size="16"
-            class="{{ item.isCopy ? 'text-green-500' : 'text-muted-foreground' }} hover:text-primary transition"
-        />
-        </button>
-      </pre>
+  <code class="text-sm">{{ item.text }}</code> 
+          <button (click)="copyToClipboard(item)" class="absolute grid place-content-center top-5 right-5">
+            <lucide-angular name="{{ item.isCopy ? 'copy-check' : 'copy' }}" size="16"
+              class="{{ item.isCopy ? 'text-green-500' : 'text-muted-foreground' }} hover:text-primary transition" />
+          </button></pre>
+      </div>
 
       <p *ngSwitchCase="'link'">
         <a class="hover:border-b hover:border-primary font-light transition roboto-mono-regular" [href]="item.url"

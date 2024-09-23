@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { LucideAngularModule, Linkedin, Github, Globe, MoveLeft, Copy, CopyCheck, ChevronsRight, ChevronsLeft, ChevronRight, ChevronLeft, Search } from 'lucide-angular';
+import { LucideAngularModule, Linkedin, Github, Globe, MoveLeft, Copy, CopyCheck, ChevronsRight, ChevronsLeft, ChevronRight, ChevronLeft, Search, Twitter, Facebook } from 'lucide-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,7 +34,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LucideAngularModule.pick({ Linkedin, Github, Globe, MoveLeft, Copy, CopyCheck, ChevronsRight, ChevronsLeft, ChevronRight, ChevronLeft, Search }),
+    LucideAngularModule.pick({ Linkedin, Github, Globe, MoveLeft, Copy, CopyCheck, ChevronsRight, ChevronsLeft, ChevronRight, ChevronLeft, Search, Twitter, Facebook }),
     FormsModule
   ],
   providers: [],

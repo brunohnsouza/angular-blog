@@ -7,19 +7,4 @@ import { Component } from '@angular/core';
 export class MenuBarComponent {
   textNameBlog = 'OBlog';
   logo = '../../../assets/logo.svg';
-
-  socialNetworks = [
-    {
-      url: 'https://www.linkedin.com/in/brunohnsouza',
-      icon: 'linkedin'
-    },
-    {
-      url: 'https://github.com/brunohnsouza',
-      icon: 'github'
-    },
-    {
-      url: 'https://brunosouzadev.netlify.app/',
-      icon: 'globe'
-    },
-  ]
 }

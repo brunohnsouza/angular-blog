@@ -53,8 +53,8 @@ export const data: ArticleProps[] = [
             },
             {
                 id: "code",
-                "language": "bash",
-                text: "npm init"
+                language: "bash",
+                text: `npm init`
             },
             {
                 id: "paragraph",
@@ -74,8 +74,8 @@ export const data: ArticleProps[] = [
             },
             {
                 id: "code",
-                "language": "bash",
-                text: "yarn init"
+                language: "bash",
+                text: `yarn init`
             },
             {
                 id: "h2",

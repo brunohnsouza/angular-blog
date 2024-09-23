@@ -65,16 +65,19 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground tracking-wide;
     scrollbar-width: var(--radius);
     scrollbar-color: hsl(var(--accent-foreground) / 0.4);
   }
+
   ::-webkit-scrollbar {
     width: 0.6rem;
     height: 0.6rem;
     background-color: hsl(var(--border));
   }
+
   ::-webkit-scrollbar-thumb {
     background-color: hsl(var(--accent-foreground) / 0.4);
     border-radius: var(--radius);

@@ -13,4 +13,19 @@ export class FooterComponent {
 
     return currentyear;
   }
+
+  socialNetworks: { url: string, icon: string }[] = [
+    {
+      url: 'https://www.linkedin.com/in/brunohnsouza',
+      icon: 'linkedin'
+    },
+    {
+      url: 'https://github.com/brunohnsouza',
+      icon: 'github'
+    },
+    {
+      url: 'https://brunosouzadev.netlify.app/',
+      icon: 'globe'
+    },
+  ]
 }
