@@ -23,7 +23,6 @@ export class HomeComponent {
     }
 
     this.database = sortByDate(data);
-    this.database.shift();
 
     this.totalPages = Math.ceil(this.database.length / this.itemsPerPage);
 
