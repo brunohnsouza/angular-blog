@@ -6,30 +6,8 @@
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
-    <app-small-card *ngFor="let article of paginatedData.slice(1)" [photoCover]="article.cover"
-      [cardDate]="article.datePost" [cardTitle]="article.title" [cardUrl]="'/post/' + formatTitlePost(article.title)"
+    <app-small-card *ngFor="let article of database.slice(1)" [photoCover]="article.cover" [cardDate]="article.datePost"
+      [cardTitle]="article.title" [cardUrl]="'/post/' + formatTitlePost(article.title)"
       [cardSubtitle]="article.subtitle" />
-  </div>
-
-  <div class="flex items-center justify-center gap-x-6">
-    <span class="text-sm roboto-mono-regular">Página {{ currentPage }} de {{ totalPages }}</span>
-
-    <div class="flex items-center gap-x-1.5">
-      <div class="flex items-center gap-x-1.5">
-        <app-pagination-button nameIcon="chevrons-left" [disabled]="currentPage === 1" (clickAction)="firstPage()" />
-
-
-        <app-pagination-button nameIcon="chevron-left" [disabled]="currentPage === 1" (clickAction)="prevPage()" />
-
-
-        <app-pagination-button nameIcon="chevron-right" [disabled]="currentPage === totalPages"
-          (clickAction)="nextPage()" />
-
-
-        <app-pagination-button nameIcon="chevrons-right" [disabled]="currentPage === totalPages"
-          (clickAction)="lastPage()" />
-
-      </div>
-    </div>
   </div>
 </section>
