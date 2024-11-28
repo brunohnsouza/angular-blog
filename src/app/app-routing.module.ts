@@ -10,7 +10,7 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'post/:id',
+    path: 'posts/:id',
     component: PostComponent,
   },
   {

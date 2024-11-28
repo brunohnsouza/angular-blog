@@ -29,31 +29,33 @@ export class PostComponent {
     this.activeRoute.paramMap.subscribe(
       result => {
         this.idElement = result.get("id")
-        this.postUrl = `https://oblog.vercel.app/post/${this.idElement}`;
+        this.postUrl = `https://oblog.vercel.app/posts/${this.idElement}`;
+
+        const encoded_url = encodeURIComponent(this.postUrl);
 
         this.socialNetworks = [
           {
-            url: `https://twitter.com/intent/tweet?url=${this.postUrl}&text=Confira%20este%20post%20incrível!`,
+            url: `https://twitter.com/intent/tweet?url=${this.postUrl}&text=${this.description}&via=OBlog`,
             icon: 'x-twitter'
           },
           {
-            url: `https://www.linkedin.com/shareArticle?url=${this.postUrl}`,
+            url: `https://www.linkedin.com/sharing/share-offsite/?url=${encoded_url}`,
             icon: 'linkedin'
           },
           {
-            url: `https://www.facebook.com/sharer/sharer.php?u=${this.postUrl}`,
+            url: `https://www.facebook.com/sharer/sharer.php?u=${encoded_url}&t=${this.title}`,
             icon: 'facebook'
           },
           {
-            url: `https://api.whatsapp.com/send?text=Olha%20esse%20conteúdo%20incrível%20no%20OBlog!%20${this.postUrl}`,
+            url: `https://api.whatsapp.com/send?text=Olha que legal esse conteúdo que vi no OBlog! ${this.description} ${this.postUrl}`,
             icon: 'whatsapp'
           },
           {
-            url: `https://telegram.me/share/url?url=${this.postUrl}&text=Olha%20esse%20conteúdo%20incrível%20no%20OBlog!%20`,
+            url: `https://telegram.me/share/url?url=${this.postUrl}&text=${this.description}`,
             icon: 'telegram'
           },
           {
-            url: `https://www.reddit.com/submit?url=${this.postUrl}&title=Olha%20esse%20conteúdo%20incrível%20no%20OBlog!%20`,
+            url: `https://www.reddit.com/submit?url=${encoded_url}&title=${this.title}`,
             icon: 'reddit'
           },
         ]

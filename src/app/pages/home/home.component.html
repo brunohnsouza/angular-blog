@@ -2,12 +2,12 @@
   <div class="flex flex-col items-end gap-y-5">
     <app-big-card *ngIf="database[0]" [photoCover]="database[0].cover" [photoCoverAlt]="database[0].title"
       [cardDate]="database[0].datePost" [cardTitle]="database[0].title"
-      [cardUrl]="'/post/' + formatTitlePost(database[0].title)" [cardSubtitle]="database[0].subtitle" />
+      [cardUrl]="'/posts/' + formatTitlePost(database[0].title)" [cardSubtitle]="database[0].subtitle" />
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
     <app-small-card *ngFor="let article of paginatedData" [photoCover]="article.cover" [cardDate]="article.datePost"
-      [cardTitle]="article.title" [cardUrl]="'/post/' + formatTitlePost(article.title)"
+      [cardTitle]="article.title" [cardUrl]="'/posts/' + formatTitlePost(article.title)"
       [cardSubtitle]="article.subtitle" />
   </div>
 
