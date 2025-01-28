@@ -1332,4 +1332,111 @@ export const data: ArticleProps[] = [
             },
         ]
     },
+    {
+        id: "h1",
+        cover: "https://hermes.dio.me/articles/cover/9723a4e0-c031-4995-b158-cd27cd6fda7c.jpg",
+        datePost: format(new Date(2025, 0, 28), "dd MMMM, yyyy", { locale: ptBR }),
+        title: 'DeepSeek R1: Como o modelo de IA open source da China está revolucionando o mercado e ajudando desenvolvedores',
+        subtitle: 'Descubra como o DeepSeek R1 está revolucionando o cenário da IA open source e criando oportunidades para desenvolvedores.',
+        content: [
+            {
+                id: "paragraph",
+                text: "A revolução na área de inteligência artificial está em pleno vapor, e uma nova peça entrou no tabuleiro: o DeepSeek R1, um modelo de IA open source que está atraindo a atenção do mundo inteiro. Desenvolvido pela startup chinesa DeepSeek, o modelo promete mudar a forma como olhamos para o desenvolvimento de IA, não apenas pelo que oferece em termos de desempenho, mas também por como foi criado — com um orçamento de apenas US$ 6 milhões."
+            },
+            {
+                id: "paragraph",
+                text: "Neste artigo, vamos explorar o que torna o DeepSeek R1 tão especial, por que ele está causando tanto alvoroço e como você, como desenvolvedor, pode se beneficiar dessa novidade."
+            },
+            {
+                id: "h2",
+                text: "O que é o DeepSeek R1?"
+            },
+            {
+                id: "paragraph",
+                text: 'O DeepSeek R1 é um modelo de linguagem natural criado para competir com os gigantes do mercado, como ChatGPT da OpenAI e o Llama 2 da Meta. No entanto, o que realmente chama a atenção é a abordagem eficiente adotada em seu desenvolvimento.'
+            },
+            {
+                id: "paragraph",
+                text: 'Enquanto muitas empresas de tecnologia investem centenas de milhões de dólares em seus modelos, a DeepSeek conseguiu criar uma solução poderosa com uma fração desse custo. Isso foi possível devido à priorização do raciocínio e da eficácia, em vez de simplesmente depender de gigantescos volumes de dados e recursos computacionais.'
+            },
+            {
+                id: "paragraph",
+                text: 'Outro ponto de destaque é que o modelo é totalmente open source, permitindo que desenvolvedores do mundo inteiro explorem, modifiquem e implementem a tecnologia em seus próprios projetos.'
+            },
+            {
+                id: "h2",
+                text: "Por que o DeepSeek R1 está revolucionando o mercado?"
+            },
+            {
+                id: "paragraph",
+                text: 'A chegada do DeepSeek R1 representa uma mudança de paradigma no campo da IA. Aqui estão algumas das razões por trás de todo o hype:'
+            },
+            {
+                id: "bullet",
+                items: [
+                    'Eficiência de custo: Com um orçamento extremamente enxuto, a DeepSeek demonstrou que é possível criar soluções altamente competitivas sem gastar fortunas.',
+                    'Acessibilidade: O modelo de código aberto oferece uma oportunidade única para desenvolvedores em todo o mundo aprenderem e trabalharem com tecnologia de ponta, independentemente de limitações financeiras.',
+                    'Concorrência global: O DeepSeek R1 coloca a China em um papel ainda mais relevante no cenário de IA, mostrando que há alternativas viáveis aos modelos das gigantes americanas.'
+                ],
+            },
+            {
+                id: "h2",
+                text: "Como desenvolvedores podem se beneficiar?"
+            },
+            {
+                id: "paragraph",
+                text: 'Se você é um desenvolvedor ou estudante de tecnologia, o DeepSeek R1 oferece diversas oportunidades para você aprimorar suas habilidades e criar projetos inovadores. Aqui estão algumas formas de aproveitar:'
+            },
+            {
+                id: "bullet",
+                items: [
+                    'Explore o modelo: Como open source, o DeepSeek R1 está disponível para download e personalização. Você pode testar suas funcionalidades, adaptá-lo às suas necessidades e aplicá-lo em diferentes cenários.',
+                    'Desenvolva aplicações práticas: Chatbots, análise de dados e sistemas de recomendação são apenas algumas das possibilidades com o DeepSeek R1. Use sua criatividade para resolver problemas do dia a dia ou criar soluções empresariais.',
+                    'Aprenda com o código: Para desenvolvedores em início de carreira, analisar o código de um modelo de IA de ponta é uma excelente oportunidade de aprendizado. Você pode entender como os algoritmos funcionam na prática e aplicá-los em seus próprios projetos.',
+                    'Participe da comunidade: Projetos open source geralmente têm comunidades ativas, onde você pode trocar experiências, tirar dúvidas e até contribuir para melhorar a tecnologia.'
+                ],
+            },
+            {
+                id: "h2",
+                text: "Impacto no mercado de trabalho"
+            },
+            {
+                id: "paragraph",
+                text: 'A popularização de modelos de IA como o DeepSeek R1 também cria novas oportunidades de emprego e especialização. Empregadores estão buscando profissionais com experiência em IA open source e conhecimentos em ferramentas como PyTorch, TensorFlow e outras plataformas relacionadas. Estar à frente desse movimento pode colocar você em uma posição de destaque no mercado.'
+            },
+            {
+                id: "h2",
+                text: "O futuro da IA open source"
+            },
+            {
+                id: "paragraph",
+                text: 'O DeepSeek R1 é apenas um exemplo de como o cenário de IA está evoluindo. A combinação de eficiência, custo reduzido e acessibilidade pode redefinir a indústria, democratizando o acesso à tecnologia e estimulando inovações globais.'
+            },
+            {
+                id: "paragraph",
+                text: 'Empresas e desenvolvedores devem ficar atentos a essas tendências para não perderem a chance de aproveitar os benefícios dessa revolução.'
+            },
+            {
+                id: "h2",
+                text: "Conclusão"
+            },
+            {
+                id: "paragraph",
+                text: 'O DeepSeek R1 é muito mais do que um modelo de IA — é um chamado para repensarmos como a tecnologia pode ser desenvolvida e compartilhada. Para os desenvolvedores, é uma oportunidade única de aprender, inovar e contribuir para um futuro mais acessível e eficiente na inteligência artificial.'
+            },
+            {
+                id: "paragraph",
+                text: 'Agora, que tal explorar o DeepSeek R1 e ver do que ele é capaz? Compartilhe como você pretende usar essa nova tecnologia em seus projetos!'
+            },
+            {
+                id: "h2",
+                text: "Referências"
+            },
+            {
+                id: 'link',
+                text: 'DeepSeek R1',
+                url: 'https://api-docs.deepseek.com/news/news250120'
+            },
+        ]
+    },
 ]
