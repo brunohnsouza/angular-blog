@@ -35,7 +35,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     LucideAngularModule.pick({ Linkedin, Github, Globe, MoveLeft, Copy, CopyCheck, ChevronsRight, ChevronsLeft, ChevronRight, ChevronLeft, Search, Twitter, Facebook }),
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

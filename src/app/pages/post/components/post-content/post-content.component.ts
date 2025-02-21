@@ -12,13 +12,15 @@ export class PostContentComponent {
   copyToClipboard(item: any) {
     navigator.clipboard.writeText(item.text).then(() => {
       item.isCopy = true;
+      
       setTimeout(() => {
         item.isCopy = false;
-      }, 3000);
+      }, 2000);
     }).catch(err => {
-      console.error('Erro ao copiar o texto: ', err);
+      console.error("Erro ao copiar código: ", err);
     });
   }
+  
 
   ngOnInit() {
     this.content.map(item => {

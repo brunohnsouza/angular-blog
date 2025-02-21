@@ -14,7 +14,7 @@ export type ArticleProps = {
 export const data: ArticleProps[] = [
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/af56b66d-1e55-49d4-a006-21a578df8c57.png",
+        cover: "https://i.imgur.com/Bv7ghzQ.png.png",
         datePost: format(new Date(2024, 7, 21), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Gerenciadores de Pacotes JavaScript: Como Escolher o Melhor para Seus Projetos',
         subtitle: 'Entenda como ferramentas como npm, Yarn, Pnpm e Deno tornam o processo de codificação mais eficiente e organizado, permitindo que você crie projetos de forma mais ágil e estruturada.',
@@ -54,7 +54,10 @@ export const data: ArticleProps[] = [
             {
                 id: "code",
                 language: "bash",
-                text: `npm init`
+                text: [
+                    "",
+                    "npm init",
+                ].join("\n")
             },
             {
                 id: "paragraph",
@@ -75,7 +78,10 @@ export const data: ArticleProps[] = [
             {
                 id: "code",
                 language: "bash",
-                text: `yarn init`
+                text: [
+                    "",
+                    "yarn init",
+                ].join("\n")
             },
             {
                 id: "h2",
@@ -190,7 +196,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/45384d5a-2a21-4545-bb63-73ddc48b7940.png",
+        cover: "https://imgur.com/DIYkhnJ.png",
         datePost: format(new Date(2024, 7, 8), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Blockchain: O Que É e Como Está Transformando as Transações Digitais',
         subtitle: 'Veja como o blockchain está transformando o mundo digital, garantindo transações seguras, descentralizadas e sem intermediários. Entenda o impacto dessa tecnologia em criptomoedas, contratos inteligentes e a revolução financeira global.',
@@ -358,7 +364,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/60772e6d-b04e-46e3-9f5e-ca1655084f3c.png",
+        cover: "https://imgur.com/fHDgDH4.png",
         datePost: format(new Date(2024, 6, 31), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Web3: O Que É e Como Funciona a Internet Descentralizada',
         subtitle: 'Descubra como a Web3 está revolucionando a internet, dando a você o controle total sobre seus dados e criando uma rede verdadeiramente democrática e sem censura.',
@@ -437,7 +443,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/eb9eb11d-205d-4bfa-b4c9-e50c0f48a463.png",
+        cover: "https://imgur.com/Wspugx5.png",
         datePost: format(new Date(2024, 5, 11), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Amazon Bedrock: Transformando Sonhos em Realidade na Era da Inteligência Artificial',
         subtitle: 'Descubra como o Amazon Bedrock pode impulsionar a inovação no Brasil, transformando sonhos em realidade na era da inteligência artificial.',
@@ -513,7 +519,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/e758e0d6-e41b-476e-b871-0b999894d785.png",
+        cover: "https://imgur.com/eEcWK0v.png",
         datePost: format(new Date(2023, 5, 16), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Internet: Do www ao .com: Um Olhar Profundo sobre o DNS e sua Hierarquia',
         subtitle: 'Conheça a hierarquia do Domain Name System (DNS), um sistema vital para a nossa busca por recursos na web.',
@@ -640,7 +646,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/c1b7f860-b51e-4239-81c7-d76d04cebd00.png",
+        cover: "https://imgur.com/qO5Sjdq.png",
         datePost: format(new Date(2023, 2, 9), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Inteligência Artifical: Como Usar O ChatGPT Nos Seus Estudos de Programação',
         subtitle: 'ChatGPT: A revolução da IA na produtividade - 100 milhões de usuários em 2 meses. Descubra como usá-lo em seus estudos de programação!',
@@ -717,7 +723,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/4107bd6b-b0b4-43d0-9c73-03b5ba45aa45.png",
+        cover: "https://imgur.com/HM5GWHe.png",
         datePost: format(new Date(2023, 1, 17), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Internet: Entenda as Formas de Transmissão de Dados Através Da Internet',
         subtitle: 'Descubra as 3 formas cruciais de comunicação na internet em nosso mundo repleto de bits! Dados incríveis revelados.',
@@ -852,7 +858,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/4ebb552f-21db-4825-ba36-f30573159577.jpg",
+        cover: "https://imgur.com/x20Vs9R.jpg",
         datePost: format(new Date(2022, 11, 1), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Saiba Como Deixar Seu Perfil No GitHub Atrativo',
         subtitle: 'Descubra como tornar seu perfil GitHub atraente e completo neste artigo especial. Deixe sua marca no mundo do código!',
@@ -971,7 +977,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/b14c7951-3a33-45e7-bd3f-670f643e4519.png",
+        cover: "https://imgur.com/fbB8rNq.png",
         datePost: format(new Date(2024, 8, 24), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Monolítico vs. Microsserviços: Qual Arquitetura Escolher?',
         subtitle: 'Monolítico ou microsserviços? Qual arquitetura é a melhor para o seu projeto? Descubra neste artigo especial!',
@@ -1127,7 +1133,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/5b3452cb-36ee-4f79-b087-f39ec35a0680.png",
+        cover: "https://imgur.com/BmqvEh0.png",
         datePost: format(new Date(2024, 9, 14), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Anti-padrões e Padrões Arquiteturais: Construindo Software da Forma Certa',
         subtitle: 'Descubra o que são anti-padrões e padrões arquiteturais e como eles podem influenciar a qualidade do seu software.',
@@ -1232,7 +1238,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/55d72223-964c-4389-8738-c2c6e39efc17.png",
+        cover: "https://imgur.com/fgENrZF.png",
         datePost: format(new Date(2024, 10, 28), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'Compatibilidade de Código: O Papel do Versionamento Semântico',
         subtitle: 'Entenda como o versionamento semântico garante a compatibilidade de código e evita surpresas no desenvolvimento de software.',
@@ -1334,7 +1340,7 @@ export const data: ArticleProps[] = [
     },
     {
         id: "h1",
-        cover: "https://hermes.dio.me/articles/cover/9723a4e0-c031-4995-b158-cd27cd6fda7c.jpg",
+        cover: "https://imgur.com/CyTSo3F.jpg",
         datePost: format(new Date(2025, 0, 28), "dd MMMM, yyyy", { locale: ptBR }),
         title: 'DeepSeek R1: Como o modelo de IA open source da China está revolucionando o mercado e ajudando desenvolvedores',
         subtitle: 'Descubra como o DeepSeek R1 está revolucionando o cenário da IA open source e criando oportunidades para desenvolvedores.',
@@ -1436,6 +1442,203 @@ export const data: ArticleProps[] = [
                 id: 'link',
                 text: 'DeepSeek R1',
                 url: 'https://api-docs.deepseek.com/news/news250120'
+            },
+        ]
+    },
+    {
+        id: "h1",
+        cover: "https://imgur.com/ijvIJcl.png",
+        datePost: format(new Date(2025, 1, 21), "dd MMMM, yyyy", { locale: ptBR }),
+        title: 'Dominando o Node.js: Guia Prático das APIs Nativas Mais Importantes',
+        subtitle: 'Descubra como as APIs nativas do Node.js, como FS, HTTP, Events, Path e Stream, podem tornar seu código mais eficiente, eliminando dependências externas e aproveitando todo o poder do Node.js de forma prática e otimizada.',
+        content: [
+            {
+                id: "paragraph",
+                text: "O Node.js é uma plataforma poderosa para desenvolvimento back-end, e uma das suas grandes vantagens é o conjunto de APIs nativas que facilitam tarefas essenciais, como manipulação de arquivos, criação de servidores HTTP e gerenciamento de eventos. Neste artigo, vamos explorar as principais APIs nativas do Node.js e como utilizá-las na prática."
+            },
+            {
+                id: "h2",
+                text: "O Que São as APIs Nativas do Node.js?"
+            },
+            {
+                id: "paragraph",
+                text: "As APIs nativas do Node.js são conjuntos de funcionalidades já embutidos na plataforma, permitindo a interação direta com o sistema operacional sem a necessidade de pacotes externos. Isso torna o código mais eficiente e reduz dependências desnecessárias."
+            },
+            {
+                id: "paragraph",
+                text: "Agora, vamos explorar algumas das mais importantes."
+            },
+            {
+                id: "h2",
+                text: "FS (File System) – Manipulando Arquivos e Diretórios"
+            },
+            {
+                id: "paragraph",
+                text: "A API fs permite ler, escrever, deletar e modificar arquivos e diretórios no sistema de arquivos."
+            },
+            {
+                id: "h3",
+                text: "Exemplo: Criando e Escrevendo em um Arquivo"
+            },
+            {
+                id: "code",
+                language: "javascript",
+                text: [
+                    "",
+                    "const fs = require('fs');",
+                    "",
+                    "fs.writeFile('exemplo.txt', 'Hello, Node.js!', (err) => {",
+                    "    if (err) throw err;",
+                    "    console.log('Arquivo criado com sucesso!');",
+                    "});"
+                ].join("\n")
+            },
+            {
+                id: "paragraph",
+                text: 'Essa função cria um arquivo exemplo.txt e escreve "Hello, Node.js!" nele. Caso o arquivo já exista, ele será sobrescrito.'
+            },
+            {
+                id: "h2",
+                text: "HTTP – Criando Servidores Web"
+            },
+            {
+                id: "paragraph",
+                text: "A API http permite criar servidores e lidar com requisições HTTP de forma simples e eficiente."
+            },
+            {
+                id: "code",
+                language: "javascript",
+                text: [
+                    "",
+                    "const http = require('http');",
+                    "",
+                    "const server = http.createServer((req, res) => {",
+                    "    res.writeHead(200, { 'Content-Type': 'text/plain' });",
+                    "    res.end('Bem-vindo ao meu servidor Node.js!');",
+                    "});",
+                    "",
+                    "server.listen(3000, () => console.log('Servidor rodando na porta 3000'));",
+                ].join("\n")
+            },
+            {
+                id: "paragraph",
+                text: "Acesse http://localhost:3000 no navegador e veja o servidor em ação!"
+            },
+            {
+                id: "h2",
+                text: "Eventos – Trabalhando com EventEmitter"
+            },
+            {
+                id: "paragraph",
+                text: "O Node.js possui um sistema de eventos baseado no padrão Observer, permitindo a criação e execução de eventos personalizados."
+            },
+            {
+                id: "h3",
+                text: "Exemplo: Criando e Disparando um Evento"
+            },
+            {
+                id: "code",
+                language: "javascript",
+                text: [
+                    "",
+                    "const EventEmitter = require('events');",
+                    "const meuEmissor = new EventEmitter();",
+                    "",
+                    "meuEmissor.on('mensagem', (msg) => {",
+                    "    console.log(`Mensagem recebida: ${msg}`);",
+                    "});",
+                    "",
+                    "meuEmissor.emit('mensagem', 'Hello, eventos no Node.js!');",
+                ].join("\n")
+            },
+            {
+                id: "paragraph",
+                text: "O EventEmitter permite que diferentes partes do código se comuniquem de forma eficiente."
+            },
+            {
+                id: "h2",
+                text: "Path e URL – Manipulação de Caminhos e URLs"
+            },
+            {
+                id: "paragraph",
+                text: "O Node.js possui APIs nativas para lidar com caminhos de arquivos e URLs de maneira eficiente."
+            },
+            {
+                id: "h3",
+                text: "Exemplo: Manipulando Caminhos de Arquivos com Path"
+            },
+            {
+                id: "code",
+                language: "javascript",
+                text: [
+                    "",
+                    "const path = require('path');",
+                    "",
+                    "const caminho = path.join(__dirname, 'arquivos', 'meuarquivo.txt');",
+                    "console.log(`Caminho completo: ${caminho}`);",
+                ].join("\n")
+            },
+            {
+                id: "paragraph",
+                text: "A API path ajuda a evitar erros ao trabalhar com diretórios em diferentes sistemas operacionais."
+            },
+            {
+                id: "h3",
+                text: "Exemplo: Manipulando URLs com URL"
+            },
+            {
+                id: "code",
+                language: "javascript",
+                text: [
+                    "",
+                    "const url = require('url');",
+                    "",
+                    "const minhaURL = new URL('https://meusite.com/produto?id=10&categoria=node');",
+                    "console.log(minhaURL.searchParams.get('id')); // 10",
+                    "console.log(minhaURL.searchParams.get('categoria')); // node",
+                ].join("\n")
+            },
+            {
+                id: "paragraph",
+                text: "A API url facilita a extração de parâmetros e a manipulação de URLs."
+            },
+            {
+                id: "h2",
+                text: "Streams – Manipulação Eficiente de Dados"
+            },
+            {
+                id: "paragraph",
+                text: "As streams são utilizadas para processar grandes volumes de dados sem carregar tudo na memória."
+            },
+            {
+                id: "h3",
+                text: "Exemplo: Lendo um Arquivo com Streams"
+            },
+            {
+                id: "code",
+                language: "javascript",
+                text: [
+                    "",
+                    "const fs = require('fs');",
+                    "",
+                    "const stream = fs.createReadStream('arquivo_grande.txt', 'utf-8');",
+                    "",
+                    "stream.on('data', (chunk) => {",
+                    "    console.log(`Novo chunk recebido: ${chunk.length} bytes`);",
+                    "});",
+                ].join("\n")
+            },
+            {
+                id: "paragraph",
+                text: "Ao usar streams, o Node.js processa os dados em partes, tornando a execução mais eficiente."
+            },
+            {
+                id: "h2",
+                text: "Conclusão"
+            },
+            {
+                id: "paragraph",
+                text: "As APIs nativas do Node.js fornecem ferramentas incríveis para otimizar o desenvolvimento. Ao dominá-las, você pode criar aplicações mais eficientes e robustas sem precisar de pacotes externos. Comece a experimentá-las em seus projetos e descubra todo o potencial do Node.js!"
             },
         ]
     },
