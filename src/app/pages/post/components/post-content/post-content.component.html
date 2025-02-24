@@ -19,7 +19,7 @@
       </ul>
 
       <div class="relative">
-        <pre *ngSwitchCase="'code'" class="shadow-lg rounded-lg bg-muted pl-4 text-sm whitespace-pre-wrap">
+        <pre *ngSwitchCase="'code'" class="shadow-lg rounded-lg bg-muted px-4 text-sm whitespace-pre-wrap overflow-auto">
           <code class="language-{{ item.language }}">{{ item.text }}</code> 
           <button (click)="copyToClipboard(item)" class="absolute grid place-content-center top-5 right-5 transition">
             <lucide-angular 

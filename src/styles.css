@@ -75,7 +75,6 @@
   ::-webkit-scrollbar {
     width: 0.6rem;
     height: 0.6rem;
-    background-color: hsl(var(--border));
   }
 
   ::-webkit-scrollbar-thumb {
